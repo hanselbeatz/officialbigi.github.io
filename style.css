@@ -1,135 +1,153 @@
-/* Reset */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: black;
-    color: white;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
 }
 
-/* NAVBAR */
-nav {
+/* NAVIGATION */
+.navbar {
     width: 100%;
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.8);
     position: fixed;
     top: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(5px);
+    z-index: 1000;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    font-size: 16px;
+.navbar a {
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-}
-
-nav a:hover {
-    color: #ff4da6; /* Pink highlight like Cardi B */
-}
-
-/* HERO SECTION */
-..hero {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-content {
-    text-align: center;
-    color: white;
-}
-
-.btn {
-    background: #ff2ea6;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.hero-btn {
-    display: inline-block;
-    background: #ff4da6;
-    padding: 12px 25px;
-    border-radius: 5px;
-    margin-top: 20px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hero-btn:hover {
-    background: #ff1e90;
-}
-
-/* FOOTER */
-footer {
-    width: 100%;
-    background: #111;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    margin-top: 50px;
-    font-size: 14px;
-    color: #bbb;
-}
-.hero {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-content {
-    text-align: center;
-    color: white;
-}
-
-.btn {
-    background: #ff2ea6;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-footer {
-    background: #000;
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 40px;
-}
-
-footer .social-links {
-    margin-bottom: 15px;
-}
-
-footer .social-links a {
-    color: white;
-    margin: 0 12px;
-    text-decoration: none;
-    font-weight: 500;
     font-size: 15px;
     transition: 0.3s;
 }
 
-footer .social-links a:hover {
-    color: #ff2ea6;
+.navbar a:hover {
+    color: #ff4fb2;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #ff4fb2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #ff1f93;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #000;
+    margin-top: 40px;
+}
+
+.social-footer {
+    margin-bottom: 15px;
+}
+
+.social-footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-footer a:hover {
+    color: #ff4fb2;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .navbar {
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }
