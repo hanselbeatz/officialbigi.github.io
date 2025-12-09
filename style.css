@@ -1,118 +1,96 @@
-/* Global */
+/* ---------------------------- */
+/* GLOBAL STYLES */
+/* ---------------------------- */
+
 body {
     margin: 0;
     padding: 0;
-    background: #000;
-    color: #fff;
+    background: black;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Navigation */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* ---------------------------- */
+/* NAVBAR */
+/* ---------------------------- */
+
 .navbar {
+    width: 100%;
+    padding: 20px 40px;
+    background: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background: #000;
+    border-bottom: 1px solid #111;
+    position: sticky;
+    top: 0;
+    z-index: 20;
 }
 
-.logo {
-    font-size: 22px;
+.navbar .logo {
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
-.nav-links {
-    list-style: none;
+.navbar nav {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+.navbar nav a {
+    font-size: 1rem;
+    opacity: 0.85;
+    transition: 0.3s;
 }
 
-.nav-links a:hover {
-    opacity: 0.6;
+.navbar nav a:hover,
+.navbar nav .active {
+    opacity: 1;
 }
 
-/* Hero */
-.hero {
-    height: 100vh;
-    background-image: url("assets/IMG_3725.webp");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* ---------------------------- */
+/* STORE HEADER */
+/* ---------------------------- */
+
+.store-header {
     text-align: center;
-    padding: 20px;
+    padding: 60px 20px 30px;
 }
 
-.hero-content h1 {
-    font-size: 50px;
+.store-header h1 {
+    font-size: 3rem;
     margin-bottom: 10px;
-    font-weight: bold;
 }
 
-.hero-content p {
-    font-size: 20px;
-    margin-bottom: 30px;
+.store-header p {
+    font-size: 1.2rem;
+    opacity: 0.7;
 }
 
-/* Buttons */
-.btn-primary {
-    background: #fff;
-    color: #000;
-    padding: 14px 30px;
-    border-radius: 10px;
-    font-size: 20px;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.btn-outline {
-    border: 2px solid #fff;
-    padding: 14px 30px;
-    border-radius: 10px;
-    font-size: 20px;
-    text-decoration: none;
-    color: #fff;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #000;
-    border-top: 1px solid #222;
-}
-
-.footer-links {
-    margin-top: 10px;
-}
-
-.footer-links a {
-    color: #aaa;
-    margin: 0 8px;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: #fff;
-}
+/* ---------------------------- */
 /* STORE GRID */
+/* ---------------------------- */
+
 .store-grid {
-    margin-top: 40px;
+    padding: 40px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 30px;
 }
 
-/* PRODUCT CARD */
+/* ---------------------------- */
+/* PRODUCT CARDS */
+/* ---------------------------- */
+
 .product-card {
     background: #111;
     padding: 20px;
@@ -124,7 +102,7 @@ footer {
 
 .product-card:hover {
     transform: translateY(-6px);
-    border-color: #444;
+    border-color: #555;
 }
 
 .product-card img {
@@ -136,18 +114,17 @@ footer {
 .product-card h3 {
     font-size: 1.2rem;
     margin-bottom: 8px;
-    color: #fff;
 }
 
 .price {
     font-size: 1.1rem;
-    color: #ccc;
+    color: #bbb;
     margin-bottom: 15px;
 }
 
 /* BUY BUTTON */
 .buy-btn {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 30px;
     border: 1px solid white;
     background: transparent;
@@ -160,4 +137,40 @@ footer {
 .buy-btn:hover {
     background: white;
     color: black;
+}
+
+/* ---------------------------- */
+/* FOOTER */
+/* ---------------------------- */
+
+.footer {
+    padding: 40px;
+    text-align: center;
+    background: black;
+    border-top: 1px solid #111;
+    margin-top: 60px;
+    opacity: 0.8;
+}
+
+/* ---------------------------- */
+/* MOBILE RESPONSIVE */
+/* ---------------------------- */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .store-header h1 {
+        font-size: 2.3rem;
+    }
+
+    .store-grid {
+        padding: 20px;
+    }
 }
