@@ -1,28 +1,90 @@
-body {
+/* Reset */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+}
+
+/* NAVBAR */
 nav {
-    background: #111;
-    padding: 15px;
+    width: 100%;
+    padding: 20px;
     text-align: center;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
 }
 
 nav a {
     color: white;
     margin: 0 15px;
+    font-size: 16px;
     text-decoration: none;
-    font-size: 18px;
+    font-weight: bold;
 }
 
 nav a:hover {
-    color: #ff0000;
+    color: #ff4da6; /* Pink highlight like Cardi B */
 }
 
-section {
-    padding: 40px;
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
     text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #ff4da6;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    background: #ff1e90;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    background: #111;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #bbb;
 }
