@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Settings — Official Bigi</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .cookie-box {
+            max-width: 700px;
+            margin: 80px auto;
+            background: #111;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+
+        .cookie-option {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #222;
+        }
+
+        .cookie-option:last-child {
+            border-bottom: none;
+        }
+
+        button {
+            padding: 10px 18px;
+            border: none;
+            cursor: pointer;
+            background: #fff;
+            color: #000;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .save-btn {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="tour.html">Tour</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="cookie-box">
+    <h1>Cookies Settings</h1>
+    <p>Manage your cookie preferences on Official Bigi's website.</p>
+
+    <div class="cookie-option">
+        <span><strong>Essential Cookies</strong><br>Required for the site to function. Cannot be disabled.</span>
+        <span>✔️ Always Active</span>
+    </div>
+
+    <div class="cookie-option">
+        <span><strong>Analytics Cookies</strong><br>Helps us understand visitor activity on the site.</span>
+        <label>
+            <input type="checkbox" id="analyticsCookies"> Enable
+        </label>
+    </div>
+
+    <div class="cookie-option">
+        <span><strong>Performance Cookies</strong><br>Helps improve website speed & performance.</span>
+        <label>
+            <input type="checkbox" id="performanceCookies"> Enable
+        </label>
+    </div>
+
+    <div class="cookie-option">
+        <span><strong>Third-Party Cookies</strong><br>Used for YouTube, Spotify, TikTok embeds, etc.</span>
+        <label>
+            <input type="checkbox" id="thirdPartyCookies"> Enable
+        </label>
+    </div>
+
+    <button class="save-btn" onclick="savePreferences()">Save My Preferences</button>
+
+    <p id="saveMessage" style="margin-top: 15px; display: none; color: #0f0;">
+        ✔️ Your cookie settings have been saved.
+    </p>
+</section>
+
+<script>
+    function savePreferences() {
+        document.getElementById("saveMessage").style.display = "block";
+        setTimeout(() => {
+            document.getElementById("saveMessage").style.display = "none";
+        }, 3000);
+    }
+</script>
+
+<!-- Footer -->
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/share/1FvSpu2Zqr">📘</a>
+        <a href="https://x.com/official_bigi">✖️</a>
+        <a href="https://www.instagram.com/officialbigi__">📸</a>
+        <a href="https://youtube.com/@officialbigi">▶️</a>
+        <a href="https://open.spotify.com/artist/6WHkQeMdlvrEn89t0v60AW?si=CF3RZuRYTVynUbOfPiarCg">🎵</a>
+        <a href="https://music.apple.com/ke/artist/official-bigi/1538239239">🍎</a>
+        <a href="https://soundcloud.com/official-bigi">☁️</a>
+        <a href="https://www.tiktok.com/@officialbigi254">🎵</a>
+    </div>
+
+    <p>© 2025 Official Bigi — All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
