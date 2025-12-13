@@ -137,3 +137,44 @@ body {
     gap: 10px;
   }
 }
+/* HOME PAGE */
+.home {
+  background: #000;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  letter-spacing: 6px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  color: #aaa;
+  margin-bottom: 30px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* HERO BUTTON */
+.btn-outline {
+  padding: 12px 28px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #000;
+}
