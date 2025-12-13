@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Official Bigi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- NEW STYLE -->
-  <link rel="stylesheet" href="css/home.css">
+  <!-- FIXED CSS LINK -->
+  <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
-
-<header>
-  <nav>
+  <header class="nav">
     <h1>Official Bigi</h1>
-    <ul>
-      <li><a href="#">Music</a></li>
-      <li><a href="#">Videos</a></li>
-      <li><a href="store.html">Store</a></li>
-      <li><a href="#">Tour</a></li>
-      <li><a href="#">Subscribe</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav>
+      <a href="music.html">Music</a>
+      <a href="videos.html">Videos</a>
+      <a href="store.html">Store</a>
+      <a href="tour.html">Tour</a>
+      <a href="#newsletter">Subscribe</a>
+    </nav>
+  </header>
 
-<section class="hero">
-  <div>
+  <section class="hero">
     <h2>FAITH OVER FAME</h2>
     <p>Official Merchandise & Music</p>
-    <a href="store.html">ENTER STORE</a>
-  </div>
-</section>
+    <a href="store.html" class="btn">Enter Store</a>
+  </section>
 
-<section class="newsletter">
-  <h3>Join the Movement</h3>
-  <p>Exclusive drops. Early access.</p>
+  <section id="newsletter" class="newsletter">
+    <h3>Join the Newsletter</h3>
+    <form action="https://formspree.io/f/manragwk" method="POST">
+      <input type="email" name="email" placeholder="Your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
 
-  <form action="https://formspree.io/f/manragwk" method="POST">
-    <input type="email" name="email" placeholder="Enter your email" required>
-    <button type="submit">Subscribe</button>
-  </form>
-</section>
-
-<footer>
-  © 2025 Official Bigi. All rights reserved.
-</footer>
-
+  <footer>
+    <p>© 2025 Official Bigi. All rights reserved.</p>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="cookies.html">Cookies</a>
+  </footer>
 </body>
 </html>
