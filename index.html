@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Official Bigi</title>
+  <title>BIGI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
   <link rel="stylesheet" href="home.css">
 </head>
 
-<body>
+<body class="home">
 
-  <!-- HEADER -->
-  <header>
+  <!-- NAV -->
+  <header class="top-nav">
     <div class="logo">BIGI</div>
     <nav>
       <a href="music.html">Music</a>
@@ -25,27 +25,30 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="fade-in">
-      <!-- intentionally clean, no slogan, no fade text -->
-      <a href="store.html" class="btn">Enter Store</a>
-    </div>
+    <div class="hero-content">
+      <h1>BIGI</h1>
+      <p>Music • Culture • Vision</p>
 
-    <!-- NEWSLETTER -->
-    <div class="newsletter fade-in" id="newsletter">
-      <p>JOIN THE MAILING LIST</p>
-      <form action="https://formspree.io/f/manragwk" method="POST">
-        <input type="email" name="email" placeholder="Email address" required>
-        <button type="submit">SIGN UP</button>
-      </form>
+      <div class="hero-buttons">
+        <a href="music.html" class="btn-outline">Enter</a>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
+  <!-- FOOTER / NEWSLETTER -->
+  <footer class="site-footer" id="newsletter">
+    <h2>Join the Mailing List</h2>
+
+    <form action="https://formspree.io/f/manragwk" method="POST">
+      <input type="email" name="email" placeholder="Email address" required>
+      <button type="submit">Sign Up</button>
+    </form>
+
     <p>© 2025 Official Bigi. All rights reserved.</p>
-    <div>
-      <a href="privacy.html">Privacy</a> |
-      <a href="terms.html">Terms</a> |
+
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
       <a href="cookies.html">Cookies</a>
     </div>
   </footer>
