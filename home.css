@@ -1,4 +1,6 @@
-/* RESET */
+/* --------------------
+   GLOBAL RESET
+-------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -9,147 +11,154 @@ body {
   background: #000;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --------------------
+   NAV
+-------------------- */
+nav {
+  padding: 20px 0;
   text-align: center;
 }
 
-/* HEADER */
-.site-header {
-  padding: 30px 20px;
-}
-
-.logo {
-  font-size: 32px;
-  letter-spacing: 4px;
-  margin-bottom: 20px;
-}
-
-.main-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.main-nav a {
-  color: #888;
+nav a {
+  color: #aaa;
+  margin: 0 12px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
 }
 
-.main-nav a.active,
-.main-nav a:hover {
+nav a:hover {
   color: #fff;
 }
 
-/* HERO */
-.hero {
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* --------------------
+   MAIN CONTENT
+-------------------- */
+main {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.enter-store-btn {
-  padding: 14px 40px;
+/* --------------------
+   MUSIC GRID
+-------------------- */
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.music-item {
+  text-align: center;
+}
+
+.music-item img {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 1px solid #222;
+}
+
+.music-item h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.music-item a {
+  display: inline-block;
   border: 1px solid #fff;
+  padding: 8px 14px;
+  font-size: 12px;
   color: #fff;
   text-decoration: none;
-  font-size: 16px;
-  letter-spacing: 1px;
 }
 
-.enter-store-btn:hover {
+.music-item a:hover {
   background: #fff;
   color: #000;
 }
 
+/* --------------------
+   FOOTER
+-------------------- */
 .site-footer {
   background: #000;
-  color: #aaa;
-  text-align: center;
   padding: 50px 20px;
+  text-align: center;
+  border-top: 1px solid #111;
 }
 
-/* SOCIAL BAR */
+/* SOCIAL ICON BAR */
 .footer-social {
   display: flex;
   justify-content: center;
-  gap: 22px;
-  margin-bottom: 40px;
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+.footer-social a {
+  display: inline-flex;
 }
 
 .footer-social img {
   width: 22px;
   height: 22px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  filter: invert(1);
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .footer-social img:hover {
   opacity: 1;
+  transform: scale(1.15);
 }
 
 /* MAILING LIST */
 .footer-mailing h3 {
-  font-size: 18px;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+  font-size: 16px;
+  margin-bottom: 14px;
 }
 
 .footer-mailing form {
   display: flex;
   justify-content: center;
-  max-width: 500px;
-  margin: 0 auto 40px;
+  gap: 10px;
+  margin-bottom: 30px;
 }
 
 .footer-mailing input {
-  flex: 1;
-  padding: 12px;
+  width: 260px;
+  padding: 10px;
   border: none;
-  outline: none;
+  font-size: 14px;
 }
 
 .footer-mailing button {
-  background: #2f6df6;
+  padding: 10px 18px;
+  background: #2563eb;
   color: #fff;
   border: none;
-  padding: 12px 20px;
   cursor: pointer;
 }
 
-
-/* FOOTER */
-.site-footer {
-  margin: 50px 20px 30px;
-  font-size: 13px;
-  color: #888;
-}
-
-.footer-links {
-  margin-top: 10px;
-}
-
-.footer-links a {
-  color: #888;
-  text-decoration: none;
-  margin: 0 8px;
-}
-
-.footer-links a:hover {
-  color: #fff;
+.footer-mailing button:hover {
+  opacity: 0.9;
 }
 
 /* FOOTER LINKS */
 .footer-links {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .footer-links a {
-  color: #777;
+  color: #aaa;
+  font-size: 13px;
   margin: 0 10px;
   text-decoration: none;
-  font-size: 14px;
 }
 
 .footer-links a:hover {
@@ -158,13 +167,19 @@ body {
 
 /* COPYRIGHT */
 .footer-copy {
-  font-size: 13px;
-  color: #555;
+  font-size: 12px;
+  opacity: 0.6;
 }
 
-/* MOBILE */
+/* --------------------
+   MOBILE FIXES
+-------------------- */
 @media (max-width: 600px) {
-  .hero {
-    height: 40vh;
+  .footer-mailing form {
+    flex-direction: column;
+  }
+
+  .footer-mailing input {
+    width: 100%;
   }
 }
