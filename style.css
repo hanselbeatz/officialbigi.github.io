@@ -128,3 +128,57 @@
 
 </body>
 </html>
+/* NEWSLETTER */
+.newsletter {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #000, #050505);
+  border-top: 1px solid #111;
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.newsletter p {
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 12px 15px;
+  width: 260px;
+  background: #000;
+  border: 1px solid #333;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.newsletter input::placeholder {
+  color: #666;
+}
+
+.newsletter button {
+  padding: 12px 25px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.newsletter button:hover {
+  background: #fff;
+  color: #000;
+}
