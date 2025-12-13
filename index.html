@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BIGI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="home.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="home.css" />
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+<body>
 
-<body class="home">
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <h1 class="logo">BIGI</h1>
 
-  <!-- NAV -->
-  <header class="top-nav">
-    <div class="logo">BIGI</div>
-    <nav>
+    <nav class="nav">
+      <a href="index.html">Home</a>
       <a href="music.html">Music</a>
-      <a href="videos.html">Videos</a>
-      <a href="store.html">Store</a>
-      <a href="tour.html">Tour</a>
-      <a href="#newsletter">Subscribe</a>
+      <a href="#">Videos</a>
+      <a href="#">Store</a>
+      <a href="#">Tour</a>
+      <a href="#">Subscribe</a>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>BIGI</h1>
-      <p>Music • Culture • Vision</p>
-
-      <div class="hero-buttons">
-        <a href="music.html" class="btn-outline">Enter</a>
-      </div>
+  <!-- HERO SECTION -->
+  <main class="hero">
+    <div class="hero-inner">
+      <a href="music.html" class="enter-btn">Enter Store</a>
     </div>
+  </main>
+
+  <!-- SOCIAL LINKS -->
+  <section class="socials">
+    <a href="https://open.spotify.com/artist/6WHkQeMdlvrEn89t0v60AW" target="_blank">
+      <i class="fab fa-spotify"></i>
+    </a>
+
+    <a href="https://music.apple.com/ke/artist/official-bigi/1538239239" target="_blank">
+      <i class="fab fa-apple"></i>
+    </a>
+
+    <a href="https://soundcloud.com/official-bigi" target="_blank">
+      <i class="fab fa-soundcloud"></i>
+    </a>
+
+    <a href="https://youtube.com/@officialbigi" target="_blank">
+      <i class="fab fa-youtube"></i>
+    </a>
+
+    <a href="https://www.instagram.com/officialbigi__" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://www.tiktok.com/@officialbigi254" target="_blank">
+      <i class="fab fa-tiktok"></i>
+    </a>
+
+    <a href="https://x.com/official_bigi" target="_blank">
+      <i class="fab fa-x-twitter"></i>
+    </a>
+
+    <a href="https://www.facebook.com/share/1FvSpu2Zqr" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
   </section>
 
-  <!-- FOOTER / NEWSLETTER -->
-  <footer class="site-footer" id="newsletter">
-    <h2>Join the Mailing List</h2>
-
-    <form action="https://formspree.io/f/manragwk" method="POST">
-      <input type="email" name="email" placeholder="Email address" required>
-      <button type="submit">Sign Up</button>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <form class="newsletter">
+      <label>JOIN THE MAILING LIST</label>
+      <div class="newsletter-box">
+        <input type="email" placeholder="Email address" />
+        <button type="submit">SIGN UP</button>
+      </div>
     </form>
 
     <p>© 2025 Official Bigi. All rights reserved.</p>
 
     <div class="footer-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="cookies.html">Cookies</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Cookies</a>
     </div>
   </footer>
 
