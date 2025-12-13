@@ -41,6 +41,48 @@ main {
   margin: auto;
 }
 
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("assets/homepage.webp") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay like Tha Carter */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* LISTEN NOW button */
+.hero-btn {
+  display: inline-block;
+  padding: 14px 38px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
 /* --------------------
    MUSIC GRID
 -------------------- */
