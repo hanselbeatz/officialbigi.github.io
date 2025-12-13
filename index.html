@@ -4,42 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Official Bigi</title>
-
-  <!-- FIXED CSS LINK -->
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="home.css" />
 </head>
-
 <body>
-  <header class="nav">
-    <h1>Official Bigi</h1>
-    <nav>
-      <a href="music.html">Music</a>
-      <a href="videos.html">Videos</a>
-      <a href="store.html">Store</a>
-      <a href="tour.html">Tour</a>
-      <a href="#newsletter">Subscribe</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h2>FAITH OVER FAME</h2>
-    <p>Official Merchandise & Music</p>
-    <a href="store.html" class="btn">Enter Store</a>
-  </section>
+  <!-- INTRO -->
+  <div id="intro">
+    <h1 class="intro-logo">OFFICIAL BIGI</h1>
+    <p class="intro-tagline">FAITH OVER FAME</p>
+  </div>
 
-  <section id="newsletter" class="newsletter">
-    <h3>Join the Newsletter</h3>
-    <form action="https://formspree.io/f/manragwk" method="POST">
-      <input type="email" name="email" placeholder="Your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
+  <!-- SITE -->
+  <div id="site" class="hidden">
 
-  <footer>
-    <p>© 2025 Official Bigi. All rights reserved.</p>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="cookies.html">Cookies</a>
-  </footer>
+    <!-- NAV -->
+    <header class="nav">
+      <div class="nav-inner">
+        <h1 class="logo">Official Bigi</h1>
+        <nav>
+          <a href="music.html">Music</a>
+          <a href="videos.html">Videos</a>
+          <a href="store.html">Store</a>
+          <a href="tour.html">Tour</a>
+          <a href="#newsletter">Subscribe</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h2>FAITH OVER FAME</h2>
+      <p>Official Merchandise & Music</p>
+      <a href="store.html" class="btn">Enter Store</a>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter" class="newsletter">
+      <h3>Join the Newsletter</h3>
+      <form action="https://formspree.io/f/manragwk" method="POST">
+        <input type="email" name="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 Official Bigi. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      const intro = document.getElementById("intro");
+      const site = document.getElementById("site");
+
+      setTimeout(() => {
+        intro.style.opacity = "0";
+      }, 2500);
+
+      setTimeout(() => {
+        intro.style.display = "none";
+        site.classList.remove("hidden");
+      }, 3500);
+    });
+  </script>
+
 </body>
 </html>
