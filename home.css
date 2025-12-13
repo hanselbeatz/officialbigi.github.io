@@ -93,83 +93,80 @@ main {
 }
 
 /* SOCIAL ICON BAR */
-.footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 35px;
+.site-footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 60px 20px 40px;
 }
 
-.footer-social a {
-  display: inline-flex;
-}
-
-.footer-social img {
-  width: 22px;
-  height: 22px;
-  filter: invert(1);
-  opacity: 0.75;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.footer-social img:hover {
-  opacity: 1;
-  transform: scale(1.15);
-}
-
-/* MAILING LIST */
+/* Mailing List */
 .footer-mailing h3 {
-  font-size: 16px;
-  margin-bottom: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
 }
 
 .footer-mailing form {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 30px;
+  max-width: 500px;
+  margin: 0 auto 50px;
 }
 
 .footer-mailing input {
-  width: 260px;
-  padding: 10px;
+  flex: 1;
+  padding: 14px;
   border: none;
-  font-size: 14px;
+  outline: none;
 }
 
 .footer-mailing button {
-  padding: 10px 18px;
-  background: #2563eb;
+  padding: 14px 22px;
+  background: #2f6bff;
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
-.footer-mailing button:hover {
-  opacity: 0.9;
+/* Social Icons */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 40px;
 }
 
-/* FOOTER LINKS */
+.footer-social img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footer-social img:hover {
+  opacity: 1;
+}
+
+/* Footer Links */
 .footer-links {
-  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
 }
 
 .footer-links a {
-  color: #aaa;
-  font-size: 13px;
-  margin: 0 10px;
+  color: #777;
+  font-size: 14px;
   text-decoration: none;
 }
 
-.footer-links a:hover {
-  color: #fff;
+/* Copyright */
+.footer-copy {
+  font-size: 13px;
+  color: #555;
 }
 
-/* COPYRIGHT */
-.footer-copy {
-  font-size: 12px;
-  opacity: 0.6;
-}
 
 /* --------------------
    MOBILE FIXES
