@@ -46,7 +46,7 @@ main {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("assets/homepage.webp") center center / cover no-repeat;
+  background: url("assets/homephoto.webp") center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
