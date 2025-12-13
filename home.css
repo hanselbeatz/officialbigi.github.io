@@ -1,249 +1,111 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* BASE */
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background: #000;
-  color: #fff;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* LINKS */
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-a:hover {
-  opacity: 0.7;
-}
-
-/* HEADER / NAV */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 20px 40px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0));
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-nav a {
-  margin-left: 25px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-/* HERO SECTION */
-.hero {
-  height: 100vh;
-  background: radial-gradient(circle at center, #111 0%, #000 70%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-}
-
-/* FADE-IN ANIMATION */
-.fade-in {
-  animation: fadeIn 1.8s ease forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* HERO TEXT */
-.hero h1 {
-  font-size: clamp(42px, 7vw, 90px);
-  letter-spacing: 6px;
-  margin-bottom: 20px;
-}
-
-.hero h2 {
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: 4px;
-  margin-bottom: 40px;
-  opacity: 0.85;
-}
-
-/* BUTTON */
-.btn {
-  border: 1px solid #fff;
-  padding: 14px 40px;
-  font-size: 14px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* NEWSLETTER */
-.newsletter {
-  margin-top: 60px;
-}
-
-.newsletter p {
-  margin-bottom: 15px;
-  letter-spacing: 2px;
-  font-size: 14px;
-}
-
-.newsletter form {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.newsletter input {
-  padding: 12px 14px;
-  border: none;
-  outline: none;
-  background: #111;
-  color: #fff;
-  width: 240px;
-}
-
-.newsletter button {
-  padding: 12px 20px;
-  border: 1px solid #fff;
-  background: transparent;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.newsletter button:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* FOOTER */
-footer {
-  padding: 40px 20px;
-  text-align: center;
-  font-size: 12px;
-  opacity: 0.7;
-}
-
-footer a {
-  margin: 0 8px;
-  font-size: 11px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  header {
-    padding: 15px 20px;
-  }
-
-  nav a {
-    margin-left: 15px;
-    font-size: 12px;
-  }
-
-  .newsletter form {
-    flex-direction: column;
-  }
-
-  .newsletter input {
-    width: 100%;
-  }
-}
+/* MUSIC PAGE */
 .music-page {
   background: #000;
-  padding: 80px 40px;
+  color: #fff;
   min-height: 100vh;
 }
 
-.music-title {
-  color: #fff;
-  font-size: 48px;
+.music-header {
   text-align: center;
-  margin-bottom: 60px;
-  letter-spacing: 2px;
+  padding: 80px 20px 40px;
 }
 
+.music-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+/* GRID */
 .music-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
+  padding: 0 40px 80px;
 }
 
+/* CARD */
 .music-card {
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 14px;
+  aspect-ratio: 1 / 1;
+  background: #111;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.music-card:nth-child(odd) {
+  animation-delay: 0.15s;
 }
 
 .music-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s ease;
 }
 
+/* HOVER */
 .music-card:hover img {
   transform: scale(1.08);
 }
 
-.music-card .overlay {
+/* OVERLAY */
+.overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.65);
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   opacity: 0;
   transition: opacity 0.4s ease;
+  text-align: center;
+  padding: 20px;
 }
 
 .music-card:hover .overlay {
   opacity: 1;
 }
 
-.music-card .overlay a {
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 12px 28px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1px;
-  transition: background 0.3s, color 0.3s;
+.overlay h2 {
+  font-size: 1.3rem;
+  margin-bottom: 14px;
 }
 
-.music-card .overlay a:hover {
+.overlay a {
+  border: 1px solid #fff;
+  padding: 10px 22px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.overlay a:hover {
   background: #fff;
   color: #000;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .music-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .music-grid {
+    padding: 0 20px 60px;
+    gap: 20px;
+  }
 }
