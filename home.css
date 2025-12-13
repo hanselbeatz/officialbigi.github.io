@@ -1,111 +1,100 @@
-/* MUSIC PAGE */
-.music-page {
-  background: #000;
-  color: #fff;
-  min-height: 100vh;
+* {
+text-align: center;
+font-size: 48px;
+margin: 60px 0;
 }
 
-.music-header {
-  text-align: center;
-  padding: 80px 20px 40px;
-}
 
-.music-header h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: -1px;
-}
-
-/* GRID */
 .music-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  padding: 0 40px 80px;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+gap: 30px;
+padding: 0 40px 80px;
 }
 
-/* CARD */
+
 .music-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
-  aspect-ratio: 1 / 1;
-  background: #111;
-  transform: translateY(20px);
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
+position: relative;
+overflow: hidden;
 }
 
-.music-card:nth-child(odd) {
-  animation-delay: 0.15s;
-}
 
 .music-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
+width: 100%;
+display: block;
 }
 
-/* HOVER */
-.music-card:hover img {
-  transform: scale(1.08);
+
+.music-card .overlay {
+position: absolute;
+inset: 0;
+background: rgba(0,0,0,0.8);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+opacity: 0;
+transition: 0.3s ease;
 }
 
-/* OVERLAY */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  text-align: center;
-  padding: 20px;
-}
 
 .music-card:hover .overlay {
-  opacity: 1;
+opacity: 1;
 }
 
-.overlay h2 {
-  font-size: 1.3rem;
-  margin-bottom: 14px;
+
+.overlay h3 {
+margin-bottom: 12px;
 }
+
 
 .overlay a {
-  border: 1px solid #fff;
-  padding: 10px 22px;
-  text-decoration: none;
-  color: #fff;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
+padding: 10px 20px;
+border: 1px solid #fff;
+color: #fff;
+text-decoration: none;
+transition: 0.3s;
 }
+
 
 .overlay a:hover {
-  background: #fff;
-  color: #000;
+background: #fff;
+color: #000;
 }
 
-/* ANIMATION */
-@keyframes fadeUp {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+
+.hidden {
+display: none;
 }
 
-/* MOBILE */
+
+.load-more {
+display: block;
+margin: 0 auto 80px;
+padding: 14px 40px;
+background: transparent;
+border: 1px solid #fff;
+color: #fff;
+cursor: pointer;
+}
+
+
+.load-more:hover {
+background: #fff;
+color: #000;
+}
+
+
+.site-footer {
+text-align: center;
+padding: 30px;
+font-size: 14px;
+color: #777;
+}
+
+
 @media (max-width: 600px) {
-  .music-header h1 {
-    font-size: 2.2rem;
-  }
-
-  .music-grid {
-    padding: 0 20px 60px;
-    gap: 20px;
-  }
+.page-title {
+font-size: 36px;
+}
 }
