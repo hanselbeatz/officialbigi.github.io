@@ -10,171 +10,123 @@ body {
   color: #fff;
 }
 
-/* NAV */
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 40px 20px 20px;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
 }
 
-.top-nav nav a {
-  color: #aaa;
-  margin-left: 20px;
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #777;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
 }
 
-.top-nav nav a:hover,
-.top-nav nav a.active {
+.nav a:hover {
   color: #fff;
 }
 
-/* MUSIC PAGE */
-.music-page {
-  padding: 40px;
+/* HERO */
+.hero {
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.music-page h1 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-/* GRID */
-.music-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px;
-}
-
-.music-card {
-  text-align: center;
-}
-
-.music-card img {
-  width: 100%;
-  border-radius: 4px;
-  transition: transform 0.3s ease;
-}
-
-.music-card img:hover {
-  transform: scale(1.05);
-}
-
-.music-card h3 {
-  margin: 12px 0;
-  font-size: 14px;
-  font-weight: normal;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  padding: 8px 14px;
+.enter-btn {
   border: 1px solid #fff;
+  padding: 14px 34px;
   color: #fff;
   text-decoration: none;
-  font-size: 12px;
-  transition: background 0.3s;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
-.btn:hover {
+.enter-btn:hover {
   background: #fff;
   color: #000;
 }
 
+/* SOCIALS */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin: 60px 0;
+}
+
+.socials a {
+  color: #666;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  color: #fff;
+  transform: translateY(-3px);
+}
+
 /* FOOTER */
-.site-footer {
-  border-top: 1px solid #333;
-  padding: 40px;
+.footer {
   text-align: center;
+  padding: 40px 20px;
 }
 
-.site-footer h2 {
-  font-size: 18px;
-  margin-bottom: 20px;
+.newsletter label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
 }
 
-.site-footer form {
+.newsletter-box {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-.site-footer input {
-  padding: 10px;
-  width: 220px;
+.newsletter-box input {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
 }
 
-.site-footer button {
-  padding: 10px 16px;
+.newsletter-box button {
+  background: #1a73e8;
+  color: #fff;
   border: none;
-  background: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
+.footer p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
 .footer-links a {
-  color: #aaa;
-  margin: 0 10px;
-  font-size: 12px;
+  color: #555;
+  font-size: 13px;
   text-decoration: none;
+  margin: 0 6px;
 }
 
 .footer-links a:hover {
   color: #fff;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .top-nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-/* HOME PAGE */
-.home {
-  background: #000;
-}
-
-/* HERO */
-.hero {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-content h1 {
-  font-size: 64px;
-  letter-spacing: 6px;
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  color: #aaa;
-  margin-bottom: 30px;
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-
-/* HERO BUTTON */
-.btn-outline {
-  padding: 12px 28px;
-  border: 1px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-.btn-outline:hover {
-  background: #fff;
-  color: #000;
 }
