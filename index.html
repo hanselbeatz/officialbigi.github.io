@@ -1,79 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Official Bigi</title>
-  <link rel="stylesheet" href="home.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
 
-  <!-- INTRO -->
-  <div id="intro">
-    <h1 class="intro-logo">OFFICIAL BIGI</h1>
-    <p class="intro-tagline">FAITH OVER FAME</p>
-  </div>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">BIGI</div>
+    <nav>
+      <a href="music.html">Music</a>
+      <a href="videos.html">Videos</a>
+      <a href="store.html">Store</a>
+      <a href="tour.html">Tour</a>
+      <a href="#newsletter">Subscribe</a>
+    </nav>
+  </header>
 
-  <!-- SITE -->
-  <div id="site" class="hidden">
-
-    <!-- NAV -->
-    <header class="nav">
-      <div class="nav-inner">
-        <h1 class="logo">Official Bigi</h1>
-        <nav>
-          <a href="music.html">Music</a>
-          <a href="videos.html">Videos</a>
-          <a href="store.html">Store</a>
-          <a href="tour.html">Tour</a>
-          <a href="#newsletter">Subscribe</a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-      <h2>FAITH OVER FAME</h2>
-      <p>Official Merchandise & Music</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="fade-in">
+      <!-- intentionally clean, no slogan, no fade text -->
       <a href="store.html" class="btn">Enter Store</a>
-    </section>
+    </div>
 
     <!-- NEWSLETTER -->
-    <section id="newsletter" class="newsletter">
-      <h3>Join the Newsletter</h3>
+    <div class="newsletter fade-in" id="newsletter">
+      <p>JOIN THE MAILING LIST</p>
       <form action="https://formspree.io/f/manragwk" method="POST">
-        <input type="email" name="email" placeholder="Your email" required />
-        <button type="submit">Subscribe</button>
+        <input type="email" name="email" placeholder="Email address" required>
+        <button type="submit">SIGN UP</button>
       </form>
-    </section>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <p>© 2025 Official Bigi. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="cookies.html">Cookies</a>
-      </div>
-    </footer>
-
-  </div>
-
-  <script>
-    window.addEventListener("load", () => {
-      const intro = document.getElementById("intro");
-      const site = document.getElementById("site");
-
-      setTimeout(() => {
-        intro.style.opacity = "0";
-      }, 2500);
-
-      setTimeout(() => {
-        intro.style.display = "none";
-        site.classList.remove("hidden");
-      }, 3500);
-    });
-  </script>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Official Bigi. All rights reserved.</p>
+    <div>
+      <a href="privacy.html">Privacy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </footer>
 
 </body>
 </html>
