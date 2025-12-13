@@ -4,87 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Music | Official Bigi</title>
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="home.css" />
 </head>
+<body class="music-page">
 
-<body>
+  <header class="music-header">
+    <h1>Music</h1>
+  </header>
 
-<header class="header">
-  <div class="logo">Official Bigi</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="music.html" class="active">Music</a>
-    <a href="videos.html">Videos</a>
-    <a href="store.html">Store</a>
-  </nav>
-</header>
+  <section class="music-grid">
 
-<h1 class="page-title">Music</h1>
-
-<section class="music-grid" id="musicGrid">
-
-  <div class="music-card">
-    <img src="assets/faith-over-fame.webp" alt="Faith Over Fame">
-    <div class="overlay">
-      <h3>Faith Over Fame</h3>
-      <a href="https://hanselbeatzllc.ffm.to/faith-over-fame" target="_blank">Stream / Download</a>
+    <!-- Faith Over Fame -->
+    <div class="music-card">
+      <img src="assets/faith-over-fame.webp" alt="Faith Over Fame">
+      <div class="overlay">
+        <h2>Faith Over Fame</h2>
+        <a href="https://hanselbeatzllc.ffm.to/faith-over-fame" target="_blank">
+          Stream / Download
+        </a>
+      </div>
     </div>
-  </div>
 
-  <div class="music-card">
-    <img src="assets/closed-doors.webp" alt="Closed Doors">
-    <div class="overlay">
-      <h3>Closed Doors</h3>
-      <a href="https://hanselbeatzllc.ffm.to/closed-doors" target="_blank">Stream / Download</a>
+    <!-- Closed Doors -->
+    <div class="music-card">
+      <img src="assets/closed-doors.webp" alt="Closed Doors">
+      <div class="overlay">
+        <h2>Closed Doors</h2>
+        <a href="https://hanselbeatzllc.ffm.to/closed-doors" target="_blank">
+          Stream / Download
+        </a>
+      </div>
     </div>
-  </div>
 
-  <div class="music-card">
-    <img src="assets/popstar.webp" alt="Popstar">
-    <div class="overlay">
-      <h3>Popstar</h3>
-      <a href="https://hanselbeatzllc.ffm.to/popstar" target="_blank">Stream / Download</a>
+    <!-- Busy -->
+    <div class="music-card">
+      <img src="assets/busy.webp" alt="Busy">
+      <div class="overlay">
+        <h2>Busy</h2>
+        <a href="https://hanselbeatzllc.ffm.to/busy" target="_blank">
+          Stream / Download
+        </a>
+      </div>
     </div>
-  </div>
 
-  <div class="music-card">
-    <img src="assets/infront-of-them.webp" alt="Infront Of Them">
-    <div class="overlay">
-      <h3>Infront Of Them</h3>
-      <a href="https://hanselbeatzllc.ffm.to/infront-of-them" target="_blank">Stream / Download</a>
+    <!-- Popstar -->
+    <div class="music-card">
+      <img src="assets/popstar.webp" alt="Popstar">
+      <div class="overlay">
+        <h2>Popstar</h2>
+        <a href="https://hanselbeatzllc.ffm.to/popstar" target="_blank">
+          Stream / Download
+        </a>
+      </div>
     </div>
-  </div>
 
-  <div class="music-card hidden">
-    <img src="assets/busy.webp" alt="Busy">
-    <div class="overlay">
-      <h3>Busy</h3>
-      <a href="https://hanselbeatzllc.ffm.to/busy" target="_blank">Stream / Download</a>
+    <!-- One Drop -->
+    <div class="music-card">
+      <img src="assets/one-drop.webp" alt="One Drop">
+      <div class="overlay">
+        <h2>One Drop</h2>
+        <a href="https://hanselbeatzllcmusic.lnk.to/onedrop" target="_blank">
+          Stream / Download
+        </a>
+      </div>
     </div>
-  </div>
 
-  <div class="music-card hidden">
-    <img src="assets/for-you.webp" alt="For You">
-    <div class="overlay">
-      <h3>For You</h3>
-      <a href="https://hanselbeatzllc.ffm.to/for-you" target="_blank">Stream / Download</a>
-    </div>
-  </div>
-
-</section>
-
-<button class="load-more" onclick="loadMore()">Load More</button>
-
-<footer class="footer">
-  © 2025 Official Bigi
-</footer>
-
-<script>
-  function loadMore() {
-    document.querySelectorAll('.hidden').forEach(el => el.classList.remove('hidden'));
-    document.querySelector('.load-more').style.display = 'none';
-  }
-</script>
+  </section>
 
 </body>
 </html>
