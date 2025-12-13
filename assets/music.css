@@ -1,0 +1,95 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+.site-header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.logo {
+  font-size: 32px;
+  letter-spacing: 4px;
+}
+
+.main-nav {
+  margin-top: 15px;
+}
+
+.main-nav a {
+  color: #aaa;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  color: #fff;
+}
+
+/* TITLE */
+.page-title {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.page-title h2 {
+  font-size: 42px;
+}
+
+/* MUSIC GRID */
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  padding: 0 20px 80px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.music-item {
+  text-align: center;
+}
+
+.music-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.music-item h3 {
+  margin: 15px 0 10px;
+  font-size: 18px;
+}
+
+.music-item a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.music-item a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 12px;
+  color: #777;
+}
