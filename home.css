@@ -63,57 +63,61 @@ body {
   color: #000;
 }
 
-/* SOCIALS */
-.socials {
+.site-footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* SOCIAL BAR */
+.footer-social {
   display: flex;
   justify-content: center;
-  gap: 18px;
-  margin: 40px 0;
-  flex-wrap: wrap;
+  gap: 22px;
+  margin-bottom: 40px;
 }
 
-.socials img {
-  width: 26px;
-  height: 26px;
+.footer-social img {
+  width: 22px;
+  height: 22px;
   opacity: 0.7;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease;
 }
 
-.socials img:hover {
+.footer-social img:hover {
   opacity: 1;
 }
 
 /* MAILING LIST */
-.mailing-list {
-  margin: 50px 20px;
+.footer-mailing h3 {
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
-.mailing-list h2 {
-  font-size: 16px;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-}
-
-.mailing-list form {
+.footer-mailing form {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  max-width: 500px;
+  margin: 0 auto 40px;
 }
 
-.mailing-list input {
-  padding: 10px;
-  width: 220px;
+.footer-mailing input {
+  flex: 1;
+  padding: 12px;
   border: none;
+  outline: none;
 }
 
-.mailing-list button {
-  padding: 10px 20px;
-  border: none;
-  background: #1a73e8;
+.footer-mailing button {
+  background: #2f6df6;
   color: #fff;
+  border: none;
+  padding: 12px 20px;
   cursor: pointer;
 }
+
 
 /* FOOTER */
 .site-footer {
@@ -134,6 +138,28 @@ body {
 
 .footer-links a:hover {
   color: #fff;
+}
+
+/* FOOTER LINKS */
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #777;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* COPYRIGHT */
+.footer-copy {
+  font-size: 13px;
+  color: #555;
 }
 
 /* MOBILE */
