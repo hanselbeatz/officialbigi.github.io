@@ -1,80 +1,130 @@
-/* GLOBAL */
-body {
-    margin: 0;
-    padding: 0;
-    background: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Store | Official Bigi</title>
 
-/* HEADER */
-header {
-    padding: 40px 0 10px;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-header h1 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
+<body>
 
-/* NAV MENU */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="logo">Official Bigi</h1>
+    <nav class="nav">
+      <a href="music.html">Music</a>
+      <a href="videos.html">Videos</a>
+      <a href="store.html">Store</a>
+      <a href="tour.html">Tour</a>
+      <a href="subscribe.html">Subscribe</a>
+    </nav>
+  </header>
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    opacity: 0.85;
-}
+  <!-- STORE -->
+  <section class="store">
+    <h2 class="store-title">MERCH</h2>
 
-nav ul li a:hover {
-    opacity: 1;
-}
+    <div class="products">
 
-/* HERO SECTION (FULL SCREEN LIKE THA CARTER V) */
-.hero {
-    height: 90vh; /* almost full screen */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-}
+      <div class="product">
+        <img src="assets/IMG_3781.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Khaki T-Shirt</p>
+      </div>
 
-/* FOOTER */
-footer {
-    margin-top: 40px;
-    padding: 30px 0;
-    color: #aaa;
-    font-size: 14px;
-}
+      <div class="product">
+        <img src="assets/IMG_3780.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Black T-Shirt</p>
+      </div>
 
-footer a {
-    color: #9b80ff;
-    text-decoration: none;
-}
+      <div class="product">
+        <img src="assets/IMG_3779.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Gray T-Shirt</p>
+      </div>
 
-footer a:hover {
-    text-decoration: underline;
-}
+      <div class="product">
+        <img src="assets/IMG_3769.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Green T-Shirt</p>
+      </div>
 
-/* MOBILE FIXES */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 32px;
-    }
+      <div class="product">
+        <img src="assets/IMG_3775.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Lagoon Blue T-Shirt</p>
+      </div>
 
-    nav ul {
-        flex-direction: row;
-        gap: 20px;
-        font-size: 16px;
-    }
-}
+      <div class="product">
+        <img src="assets/IMG_3773.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Blossom T-Shirt</p>
+      </div>
+
+      <div class="product">
+        <img src="assets/IMG_3776.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Berry T-Shirt</p>
+      </div>
+
+      <div class="product">
+        <img src="assets/IMG_3772.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Green Letterman Jacket</p>
+      </div>
+
+      <div class="product">
+        <img src="assets/IMG_3777.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Berry Letterman Jacket</p>
+      </div>
+
+      <div class="product">
+        <img src="assets/IMG_3770.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Red Letterman Jacket</p>
+      </div>
+
+      <div class="product">
+        <img src="assets/IMG_3774.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Brown Letterman Jacket</p>
+      </div>
+
+      <div class="product">
+        <img src="assets/IMG_3768.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Yellow Letterman Jacket</p>
+      </div>
+
+      <div class="product">
+        <img src="assets/IMG_3771.png" alt="">
+        <h3>Void Saint</h3>
+        <p>Denim Jacket</p>
+      </div>
+
+      <div class="product">
+        <img src="assets/IMG_3778.png" alt="">
+        <h3>Faith Over Fame</h3>
+        <p>Shorts</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Official Bigi. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Cookies</a>
+    </div>
+  </footer>
+
+</body>
+</html>
