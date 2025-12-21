@@ -2,54 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Official Bigi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Official Bigi</title>
+
   <link rel="stylesheet" href="home.css" />
 </head>
 <body>
 
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <img src="assets/homepage.webp" alt="Official Bigi" />
-    <div class="hero-content">
-      <a href="https://hanselbeatzllc.ffm.to/faith-over-fame" target="_blank" class="hero-btn">LISTEN NOW</a>
-    </div>
-  </header>
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="logo">OFFICIAL BIGI</div>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="about.html">About</a>
+    <a href="store.html">Store</a>
+  </nav>
 
-    <!-- MAILING LIST -->
-    <section class="newsletter">
-      <h3>Join the Mailing List</h3>
-      <form action="https://formspree.io/f/manragwk" method="POST">
-        <input type="email" name="email" placeholder="Your email" required />
-        <button type="submit">Sign Up</button>
-      </form>
-    </section>
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
 
-    <!-- SOCIAL ICON BAR -->
-    <div class="social-icons">
-      <a href="https://open.spotify.com/artist/6WHkQeMdlvrEn89t0v60AW" target="_blank">Spotify</a>
-      <a href="https://music.apple.com/ke/artist/official-bigi/1538239239" target="_blank">Apple Music</a>
-      <a href="https://youtube.com/@officialbigi" target="_blank">YouTube</a>
-      <a href="https://www.instagram.com/officialbigi__" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@officialbigi254" target="_blank">TikTok</a>
-      <a href="https://x.com/official_bigi" target="_blank">X</a>
-      <a href="https://soundcloud.com/official-bigi" target="_blank">SoundCloud</a>
-    </div>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <img src="homepage.webp" alt="Faith Over Fame" />
+  <div class="hero-overlay">
+    <h1>FAITH OVER FAME</h1>
+    <a
+      href="https://hanselbeatzllc.ffm.to/faith-over-fame"
+      class="hero-btn"
+      target="_blank"
+    >
+      LISTEN NOW
+    </a>
+  </div>
+</section>
 
-    <!-- FOOTER LINKS -->
-    <nav class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="music.html">Music</a>
-      <a href="about.html">About</a>
-    </nav>
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
 
-    <!-- COPYRIGHT -->
-    <p class="copyright">© 2025 Official Bigi. All Rights Reserved.</p>
+  <!-- Mailing list -->
+  <div class="footer-mailing">
+    <h3>JOIN THE MAILING LIST</h3>
+    <form>
+      <input type="email" placeholder="Email address" required />
+      <button type="submit">SIGN UP</button>
+    </form>
+  </div>
 
-  </footer>
+  <!-- Social icons -->
+  <div class="footer-socials">
+    <a href="https://open.spotify.com/artist/6WHkQeMdlvrEn89t0v60AW" target="_blank">Spotify</a>
+    <a href="https://music.apple.com/ke/artist/official-bigi/1538239239" target="_blank">Apple</a>
+    <a href="https://soundcloud.com/official-bigi" target="_blank">SoundCloud</a>
+    <a href="https://youtube.com/@officialbigi" target="_blank">YouTube</a>
+    <a href="https://www.instagram.com/officialbigi__" target="_blank">Instagram</a>
+    <a href="https://x.com/official_bigi" target="_blank">X</a>
+    <a href="https://www.facebook.com/share/1FvSpu2Zqr" target="_blank">Facebook</a>
+  </div>
+
+  <!-- Footer links -->
+  <div class="footer-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="cookies.html">Cookies</a>
+  </div>
+
+  <!-- Copyright -->
+  <p class="footer-copy">© 2025 Official Bigi. All rights reserved.</p>
+
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("navLinks");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+</script>
 
 </body>
 </html>
