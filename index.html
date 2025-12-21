@@ -2,99 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Official Bigi</title>
-  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="home.css"/>
 </head>
+
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="logo">OFFICIAL BIGI</div>
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="music.html">Music</a>
-    <a href="about.html">About</a>
-    <a href="videos.html">Videos</a>
-    <a href="store.html">Store</a>
-  </nav>
-
-  <!-- HAMBURGER -->
-  <div class="hamburger" id="hamburger">
+  <div class="hamburger" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
   </div>
+
+  <nav class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="videos.html">Videos</a>
+    <a href="store.html">Store</a>
+    <a href="about.html">About</a>
+  </nav>
 </header>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a>
-  <a href="music.html">Music</a>
-  <a href="about.html">About</a>
-  <a href="videos.html">Videos</a>
-  <a href="store.html">Store</a>
-</div>
-
-<!-- HERO -->
 <section class="hero">
-  <img src="assets/home-art.webp" alt="Official Bigi Art" />
-  <div class="hero-overlay">
+  <div class="hero-content">
     <h1>FAITH OVER FAME</h1>
     <a
       href="https://hanselbeatzllc.ffm.to/faith-over-fame"
       target="_blank"
-      class="cta"
+      class="btn"
     >
       LISTEN NOW
     </a>
   </div>
 </section>
 
-<!-- FOOTER -->
+<section class="newsletter">
+  <h2>JOIN THE MAILING LIST</h2>
+  <form>
+    <input type="email" placeholder="Email address" required>
+    <button type="submit">SIGN UP</button>
+  </form>
+</section>
+
+<section class="social">
+  <a href="https://music.apple.com/ke/artist/official-bigi/1538239239" target="_blank"></a>
+  <a href="https://soundcloud.com/official-bigi" target="_blank">☁</a>
+  <a href="https://youtube.com/@officialbigi" target="_blank">▶</a>
+  <a href="https://www.instagram.com/officialbigi__" target="_blank">◉</a>
+  <a href="https://x.com/official_bigi" target="_blank">𝕏</a>
+  <a href="https://www.facebook.com/share/1FvSpu2Zqr" target="_blank">f</a>
+</section>
+
 <footer class="footer">
-
-  <!-- MAILING LIST -->
-  <div class="footer-mailing">
-    <h3>JOIN THE MAILING LIST</h3>
-    <form>
-      <input type="email" placeholder="Email address" required />
-      <button type="submit">SIGN UP</button>
-    </form>
-  </div>
-
-  <!-- SOCIAL ICON BAR -->
-  <div class="footer-social">
-    <a href="https://music.apple.com/ke/artist/official-bigi/1538239239" target="_blank">Apple</a>
-    <a href="https://soundcloud.com/official-bigi" target="_blank">SoundCloud</a>
-    <a href="https://youtube.com/@officialbigi" target="_blank">YouTube</a>
-    <a href="https://www.instagram.com/officialbigi__" target="_blank">Instagram</a>
-    <a href="https://x.com/official_bigi" target="_blank">X</a>
-    <a href="https://www.facebook.com/share/1FvSpu2Zqr" target="_blank">Facebook</a>
-  </div>
-
-  <!-- FOOTER LINKS -->
   <div class="footer-links">
     <a href="#">Privacy</a>
     <a href="#">Terms</a>
     <a href="#">Cookies</a>
   </div>
-
-  <!-- COPYRIGHT -->
-  <p class="footer-copy">
-    © 2025 Official Bigi. All rights reserved.
-  </p>
-
+  <p>© 2025 Official Bigi. All rights reserved.</p>
 </footer>
 
 <script>
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("open");
-  });
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("open");
+}
 </script>
 
 </body>
