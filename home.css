@@ -8,7 +8,7 @@
 body {
   background: #000;
   color: #fff;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -28,9 +28,9 @@ body {
 }
 
 .logo {
+  font-family: 'Playfair Display', serif;
   font-size: 14px;
   letter-spacing: 4px;
-  font-weight: 700;
 }
 
 /* HAMBURGER */
@@ -44,7 +44,6 @@ body {
   height: 2px;
   background: #b91c1c;
   margin: 6px 0;
-  transition: 0.3s;
 }
 
 /* NAV */
@@ -69,7 +68,6 @@ body {
   font-size: 22px;
   letter-spacing: 3px;
   opacity: 0.85;
-  transition: opacity 0.3s ease;
 }
 
 .nav a:hover {
@@ -96,19 +94,20 @@ body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.6),
     rgba(0,0,0,0.9)
   );
 }
 
 .hero-content {
   position: relative;
+  z-index: 2;
   text-align: center;
   padding: 60px;
-  z-index: 2;
 }
 
 .hero h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 3rem;
   letter-spacing: 6px;
   margin-bottom: 30px;
@@ -129,16 +128,16 @@ body {
   background: #b91c1c;
 }
 
-/* MAILING LIST */
+/* MAILING */
 .mailing {
   padding: 90px 20px;
   text-align: center;
 }
 
 .mailing h2 {
-  margin-bottom: 16px;
+  font-family: 'Playfair Display', serif;
   letter-spacing: 4px;
-  font-size: 1.6rem;
+  margin-bottom: 16px;
 }
 
 .mailing p {
@@ -166,7 +165,6 @@ body {
   color: #fff;
   letter-spacing: 2px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 .mailing button:hover {
@@ -184,7 +182,6 @@ body {
 .social-bar a {
   color: #777;
   font-size: 22px;
-  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -209,7 +206,6 @@ body {
   color: #666;
   margin: 0 12px;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
@@ -220,10 +216,6 @@ body {
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.2rem;
-  }
-
-  .hero-content {
-    padding: 40px 20px;
   }
 
   .mailing form {
