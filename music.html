@@ -3,26 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tour | Official BIGI</title>
+  <title>Music | Official Bigi</title>
 
-  <!-- FONTS -->
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 
   <!-- ICONS -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="tour.css" />
+  <link rel="stylesheet" href="music.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="header">
   <div class="logo">Official Bigi</div>
 
@@ -41,24 +38,40 @@
     <a href="about.html">About</a>
   </nav>
 </header>
-  
-<!-- HERO -->
-  <section class="music-hero">
-    <h1>MUSIC</h1>
-  <p>Latest Songs By Official Bigi.</p>
+
+<!-- ================= HERO ================= -->
+<section class="music-hero">
+  <h1>MUSIC</h1>
+  <p>Latest releases by Official Bigi</p>
 </section>
-  
-<!-- FOOTER -->
+
+<!-- ================= MUSIC GRID (PLACEHOLDER) ================= -->
+<section class="music-grid">
+
+  <!-- ALBUM CARD -->
+  <div class="album-card">
+    <img src="assets/faith-over-fame.webp" alt="Faith Over Fame">
+    <h3>Faith Over Fame</h3>
+    <a href="https://hanselbeatzllc.ffm.to/faith-over-fame" target="_blank" class="stream-btn">
+      Stream / Download
+    </a>
+  </div>
+
+  <!-- DUPLICATE BLOCK FOR MORE ALBUMS -->
+
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
 
   <!-- SOCIAL ICONS -->
   <div class="social-bar">
-    <a href="#"><i class="fa-brands fa-apple"></i></a>
-    <a href="#"><i class="fa-brands fa-soundcloud"></i></a>
-    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://music.apple.com/ke/artist/official-bigi/1538239239" target="_blank"><i class="fa-brands fa-apple"></i></a>
+    <a href="https://soundcloud.com/official-bigi" target="_blank"><i class="fa-brands fa-soundcloud"></i></a>
+    <a href="https://youtube.com/@officialbigi" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://www.instagram.com/officialbigi__" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://x.com/official_bigi" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.facebook.com/share/1FvSpu2Zqr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
   </div>
 
   <p class="copyright">
@@ -72,6 +85,13 @@
   </div>
 
 </footer>
+
+<!-- ================= JS ================= -->
+<script>
+  function toggleMenu() {
+    document.getElementById("nav").classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>
