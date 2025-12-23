@@ -6,121 +6,152 @@
 }
 
 body {
+  font-family: 'Montserrat', sans-serif;
   background: #000;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* HEADER */
 .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 64px;
-  background: rgba(0,0,0,0.65);
-  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
-  z-index: 1000;
+  padding: 22px 30px;
+  position: sticky;
+  top: 0;
+  background: #000;
+  z-index: 999;
 }
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 14px;
-  letter-spacing: 4px;
-}
-
-/* HAMBURGER */
-.hamburger {
-  width: 26px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  display: block;
-  height: 2px;
-  background: #b91c1c;
-  margin: 6px 0;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
 }
 
 /* NAV */
 .nav {
-  position: fixed;
-  top: 64px;
-  right: -100%;
-  width: 100%;
-  height: calc(100vh - 64px);
-  background: #000;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 28px;
-  transition: right 0.4s ease;
 }
 
 .nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-size: 22px;
-  letter-spacing: 3px;
-  opacity: 0.85;
+  font-weight: 300;
+  font-size: 0.95rem;
+  transition: opacity 0.3s;
 }
 
 .nav a:hover {
-  opacity: 1;
+  opacity: 0.6;
 }
 
-.nav.open {
-  right: 0;
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
-/* SOCIAL */
+.hamburger span {
+  width: 26px;
+  height: 2px;
+  background: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* HERO */
+.music-hero {
+  text-align: center;
+  padding: 100px 20px 70px;
+}
+
+.music-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  margin-bottom: 10px;
+}
+
+.music-hero p {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* FOOTER */
+.footer {
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+
 .social-bar {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding-bottom: 14px;
+  gap: 18px;
+  margin-bottom: 25px;
 }
 
 .social-bar a {
-  color: #777;
-  font-size: 20px;
+  color: white;
+  font-size: 1.1rem;
+  transition: opacity 0.3s;
 }
 
 .social-bar a:hover {
-  color: #fff;
+  opacity: 0.6;
 }
 
-/* FOOTER LINKS */
 .footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-  margin-top: 12px;
+  margin-top: 18px;
 }
 
 .footer-links a {
-  color: #666;
+  color: white;
+  margin: 0 12px;
   text-decoration: none;
+  font-size: 0.85rem;
+  opacity: 0.7;
 }
 
 .footer-links a:hover {
-  color: #fff;
+  opacity: 1;
 }
 
-/* MOBILE */
+.copyright {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+/* ========================= */
+/* MOBILE MENU */
+/* ========================= */
+
 @media (max-width: 768px) {
-  .tour-row {
-    grid-template-columns: 1fr;
-    gap: 10px;
+
+  .hamburger {
+    display: flex;
   }
 
-  .ticket {
-    text-align: left;
-    width: fit-content;
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 25px 0;
+  }
+
+  .nav a {
+    padding: 14px 0;
+    font-size: 1.1rem;
+  }
+
+  .nav.active {
+    display: flex;
   }
 }
