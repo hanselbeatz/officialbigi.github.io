@@ -1,40 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos — Official Bigi</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videos | Official BIGI</title>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+  <!-- ICONS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="videos.css" />
 </head>
+
 <body>
 
-<header class="navbar">
-    <div class="logo">Official<br>Bigi</div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="music.html">Music</a>
-        <a href="videos.html" class="active">Videos</a>
-        <a href="store.html">Store</a>
-        <a href="tour.html">Tour</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">Official Bigi</div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="videos.html">Videos</a>
+    <a href="store.html">Store</a>
+    <a href="tour.html">Tour</a>
+    <a href="about.html">About</a>
+  </nav>
 </header>
 
-<section class="page-container">
-    <h1>Videos</h1>
-    <p>Watch official music videos, performances, and behind-the-scenes content.</p>
+<!-- HERO -->
+<section class="hero video-hero">
+  <div class="hero-content">
+    <h1>VIDEOS</h1>
+  </div>
 </section>
 
-<footer>
-    <p>© 2025 Official Bigi. All rights reserved.</p>
-    <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">Cookies Policy</a>
-        <a href="#">Cookies Settings</a>
+<!-- VIDEO GRID -->
+<section class="videos">
+  <div class="video-grid">
+
+    <!-- VIDEO 1 -->
+    <div class="video-card">
+      <iframe
+        src="https://www.youtube.com/embed//9YpTSjHo4f4?si=4KrxHlMBvQgYXQdx"
+        title="YouTube video player"
+        allowfullscreen>
+      </iframe>
+      <p>Faith Over Fame</p>
     </div>
+
+    <!-- VIDEO 2 -->
+    <div class="video-card">
+      <iframe
+        src="https://www.youtube.com/embed/eMU2AxFgQnE?si=oF4cjovJTj4Jfjm6"
+        title="YouTube video player"
+        allowfullscreen>
+      </iframe>
+      <p>Official Music Video</p>
+    </div>
+
+    <!-- VIDEO 3 -->
+    <div class="video-card">
+      <iframe
+        src="https://www.youtube.com/embed/cIaYupyMtUE?si=8zS0MPW8i35eaU9b"
+        title="YouTube video player"
+        allowfullscreen>
+      </iframe>
+      <p>Behind the Scenes</p>
+    </div>
+
+      <!-- VIDEO 4 -->
+    <div class="video-card">
+      <iframe
+        src="https://www.youtube.com/embed/vXsjrPSdwwU?si=7WO3zgRPbR4zl2gT"
+        title="YouTube video player"
+        allowfullscreen>
+      </iframe>
+      <p>Behind the Scenes</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SOCIAL ICON BAR -->
+<section class="social-bar">
+  <a href="https://music.apple.com/ke/artist/official-bigi/1538239239" target="_blank">
+    <i class="fa-brands fa-apple"></i>
+  </a>
+  <a href="https://soundcloud.com/official-bigi" target="_blank">
+    <i class="fa-brands fa-soundcloud"></i>
+  </a>
+  <a href="https://youtube.com/@officialbigi" target="_blank">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+  <a href="https://www.instagram.com/officialbigi__" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://x.com/official_bigi" target="_blank">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+  <a href="https://www.facebook.com/share/1FvSpu2Zqr" target="_blank">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="copyright">
+    © 2025 Official Bigi. All rights reserved.
+  </p>
+
+  <div class="footer-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="cookies.html">Cookies</a>
+  </div>
 </footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("nav").classList.toggle("open");
+}
+</script>
 
 </body>
 </html>
