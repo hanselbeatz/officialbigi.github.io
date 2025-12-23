@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Music | Official BIGI</title>
+  <title>Music | Official Bigi</title>
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,34 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 
   <!-- ICONS -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="music.css" />
+  <link rel="stylesheet" href="music.css">
 </head>
 
 <body>
 
-<!-- HEADER (IDENTICAL TO HOME) -->
-<header class="header">
-  <div class="logo">Official Bigi</div>
-
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <nav class="nav" id="nav">
-    <a href="index.html">Home</a>
-    <a href="music.html">Music</a>
-    <a href="videos.html">Videos</a>
-    <a href="store.html">Store</a>
-    <a href="tour.html">Tour</a>
-    <a href="about.html">About</a>
-  </nav>
-</header>
+<div id="header"></div>
 
 <!-- HERO -->
 <section class="music-hero">
@@ -46,49 +27,29 @@
   <p>Latest releases by Official Bigi</p>
 </section>
 
-<!-- MUSIC GRID (placeholder) -->
-<section class="music-grid">
-  <div class="album">Faith Over Fame</div>
-  <div class="album">One Drop</div>
-  <div class="album">Closed Doors</div>
+<!-- MUSIC LIST -->
+<section class="music-list">
+  <ul>
+    <li>Faith Over Fame</li>
+    <li>One Drop</li>
+    <li>Closed Doors</li>
+  </ul>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-
-  <section class="mailing">
-    <h2>JOIN THE MAILING LIST</h2>
-    <form>
-      <input type="email" placeholder="Email address" required>
-      <button type="submit">SIGN UP</button>
-    </form>
-  </section>
-
-  <div class="social-bar">
-    <a href="https://music.apple.com/ke/artist/official-bigi/1538239239"><i class="fa-brands fa-apple"></i></a>
-    <a href="https://soundcloud.com/official-bigi"><i class="fa-brands fa-soundcloud"></i></a>
-    <a href="https://youtube.com/@officialbigi"><i class="fa-brands fa-youtube"></i></a>
-    <a href="https://www.instagram.com/officialbigi__"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://x.com/official_bigi"><i class="fa-brands fa-x-twitter"></i></a>
-    <a href="https://www.facebook.com/share/1FvSpu2Zqr"><i class="fa-brands fa-facebook-f"></i></a>
-  </div>
-
-  <p class="copyright">
-    © 2025 Official Bigi. All rights reserved.
-  </p>
-
-  <div class="footer-links">
-    <a href="#">Privacy</a>
-    <a href="#">Terms</a>
-    <a href="#">Cookies</a>
-  </div>
-
-</footer>
+<div id="footer"></div>
 
 <script>
 function toggleMenu() {
   document.getElementById("nav").classList.toggle("open");
 }
+
+fetch("header.html").then(res => res.text()).then(data => {
+  document.getElementById("header").innerHTML = data;
+});
+
+fetch("footer.html").then(res => res.text()).then(data => {
+  document.getElementById("footer").innerHTML = data;
+});
 </script>
 
 </body>
