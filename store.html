@@ -15,9 +15,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="store.css">
-
-  <!-- PAYPAL -->
-  <script src="https://www.paypal.com/sdk/js?client-id=AZ933GYfkxkWhndB0N2ArALaqXeke1h_BfBpKu3mAZk2G7Lk_Go1_SVTwNAjtypGBjc71oEKKen8dImw&currency=USD"></script>
 </head>
 
 <body>
@@ -49,8 +46,8 @@
 <div class="cart-drawer" id="cart">
   <h3>Your Cart</h3>
   <div id="cart-items"></div>
-  <p class="cart-total">Total: $<span id="cart-total">0</span></p>
-  <div id="paypal-cart-button"></div>
+  <p class="cart-total">Total: KSh <span id="cart-total">0</span></p>
+  <button class="checkout-btn" onclick="payWithPaystack()">CHECKOUT</button>
 </div>
 
 <!-- STORE -->
@@ -59,73 +56,61 @@
 
   <div class="product-grid">
 
-    <!-- PRODUCT -->
+    <!-- PRODUCT TEMPLATE (x5) -->
     <div class="product-card" data-name="Faith Over Fame – Green">
-    <img src="assets/fof-green-shirt.webp" alt="Faith Over Fame Green Shirt">
-    <h3>Faith Over Fame – Green</h3>
-    <p>$35</p>
+      <img src="assets/fof-green-shirt.webp" alt="Faith Over Fame Green Shirt">
+      <h3>Faith Over Fame – Green</h3>
+      <p>KSh 4,500</p>
 
-    <div class="sizes">
-      <button>S</button><button>M</button><button>L</button>
-      <button>XL</button><button>XXL</button>
+      <div class="sizes">
+        <button>S</button><button>M</button><button>L</button>
+        <button>XL</button><button>XXL</button>
+      </div>
+
+      <button class="add-btn">ADD TO CART</button>
     </div>
 
-    <button class="add-btn">ADD TO CART</button>
-  </div>
-
-  <div class="product-card" data-name="Faith Over Fame – Black">
-    <img src="assets/fof-black-shirt.webp" alt="Faith Over Fame Black Shirt">
-    <h3>Faith Over Fame – Black</h3>
-    <p>$35</p>
-
-    <div class="sizes">
-      <button>S</button><button>M</button><button>L</button>
-      <button>XL</button><button>XXL</button>
+    <div class="product-card" data-name="Faith Over Fame – Black">
+      <img src="assets/fof-black-shirt.webp">
+      <h3>Faith Over Fame – Black</h3>
+      <p>KSh 4,500</p>
+      <div class="sizes">
+        <button>S</button><button>M</button><button>L</button><button>XL</button><button>XXL</button>
+      </div>
+      <button class="add-btn">ADD TO CART</button>
     </div>
 
-    <button class="add-btn">ADD TO CART</button>
-  </div>
-
-  <div class="product-card" data-name="Faith Over Fame – Berry">
-    <img src="assets/fof-berry-shirt.webp" alt="Faith Over Fame Berry Shirt">
-    <h3>Faith Over Fame – Berry</h3>
-    <p>$35</p>
-
-    <div class="sizes">
-      <button>S</button><button>M</button><button>L</button>
-      <button>XL</button><button>XXL</button>
+    <div class="product-card" data-name="Faith Over Fame – Berry">
+      <img src="assets/fof-berry-shirt.webp">
+      <h3>Faith Over Fame – Berry</h3>
+      <p>KSh 4,500</p>
+      <div class="sizes">
+        <button>S</button><button>M</button><button>L</button><button>XL</button><button>XXL</button>
+      </div>
+      <button class="add-btn">ADD TO CART</button>
     </div>
 
-    <button class="add-btn">ADD TO CART</button>
-  </div>
-
-  <div class="product-card" data-name="Faith Over Fame – White">
-    <img src="assets/fof-white-shirt.webp" alt="Faith Over Fame White Shirt">
-    <h3>Faith Over Fame – White</h3>
-    <p>$35</p>
-
-    <div class="sizes">
-      <button>S</button><button>M</button><button>L</button>
-      <button>XL</button><button>XXL</button>
+    <div class="product-card" data-name="Faith Over Fame – White">
+      <img src="assets/fof-white-shirt.webp">
+      <h3>Faith Over Fame – White</h3>
+      <p>KSh 4,500</p>
+      <div class="sizes">
+        <button>S</button><button>M</button><button>L</button><button>XL</button><button>XXL</button>
+      </div>
+      <button class="add-btn">ADD TO CART</button>
     </div>
 
-    <button class="add-btn">ADD TO CART</button>
-  </div>
-
-  <div class="product-card" data-name="Faith Over Fame – Grey">
-    <img src="assets/fof-grey-shirt.webp" alt="Faith Over Fame Grey Shirt">
-    <h3>Faith Over Fame – Grey</h3>
-    <p>$35</p>
-
-    <div class="sizes">
-      <button>S</button><button>M</button><button>L</button>
-      <button>XL</button><button>XXL</button>
+    <div class="product-card" data-name="Faith Over Fame – Grey">
+      <img src="assets/fof-grey-shirt.webp">
+      <h3>Faith Over Fame – Grey</h3>
+      <p>KSh 4,500</p>
+      <div class="sizes">
+        <button>S</button><button>M</button><button>L</button><button>XL</button><button>XXL</button>
+      </div>
+      <button class="add-btn">ADD TO CART</button>
     </div>
 
-    <button class="add-btn">ADD TO CART</button>
   </div>
-
-</div>
 </section>
 
 <!-- SOCIAL -->
@@ -148,8 +133,12 @@
   </div>
 </footer>
 
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
 <script>
 let cart = [];
+const PAYSTACK_KEY = "pk_live_64c997aee91b22d8db817df8075dd72faa81f2fb";
+const PRICE_KES = 4500;
 
 function toggleMenu() {
   document.getElementById("nav").classList.toggle("open");
@@ -172,14 +161,14 @@ document.querySelectorAll('.product-card').forEach(card => {
 
   card.querySelector('.add-btn').onclick = () => {
     if (!selectedSize) {
-      alert('Select a size first');
+      alert('Please select a size first');
       return;
     }
 
     cart.push({
       name: card.dataset.name,
       size: selectedSize,
-      price: 35
+      price: PRICE_KES
     });
 
     updateCart();
@@ -189,42 +178,44 @@ document.querySelectorAll('.product-card').forEach(card => {
 function updateCart() {
   const items = document.getElementById('cart-items');
   items.innerHTML = '';
-
   let total = 0;
 
   cart.forEach(item => {
     total += item.price;
-    items.innerHTML += `<p>${item.name} (${item.size}) - $${item.price}</p>`;
+    items.innerHTML += `<p>${item.name} (${item.size}) - KSh ${item.price}</p>`;
   });
 
   document.getElementById('cart-total').textContent = total;
   document.getElementById('cart-count').textContent = cart.length;
-
-  renderPayPal(total);
 }
 
-function renderPayPal(total) {
-  document.getElementById('paypal-cart-button').innerHTML = '';
+function payWithPaystack() {
+  if (!cart.length) {
+    alert('Your cart is empty');
+    return;
+  }
 
-  if (total === 0) return;
+  const totalKES = cart.reduce((sum, i) => sum + i.price, 0);
 
-  paypal.Buttons({
-    createOrder(data, actions) {
-      return actions.order.create({
-        purchase_units: [{
-          amount: { value: total.toFixed(2) }
-        }]
-      });
+  PaystackPop.setup({
+    key: PAYSTACK_KEY,
+    email: "customer@officialbigi.com",
+    amount: totalKES * 100, // Paystack KES minor units
+    currency: "KES",
+    metadata: {
+      custom_fields: [{
+        display_name: "Order",
+        variable_name: "items",
+        value: cart.map(i => `${i.name} (${i.size})`).join(', ')
+      }]
     },
-    onApprove(data, actions) {
-      return actions.order.capture().then(() => {
-        alert('Payment successful!');
-        cart = [];
-        updateCart();
-        toggleCart();
-      });
+    callback: function(response) {
+      alert("Payment successful! Ref: " + response.reference);
+      cart = [];
+      updateCart();
+      toggleCart();
     }
-  }).render('#paypal-cart-button');
+  }).openIframe();
 }
 </script>
 
