@@ -1,0 +1,188 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER (shared styles required) */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.hamburger {
+  width: 26px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background: #b91c1c;
+  margin: 6px 0;
+}
+
+.nav {
+  position: fixed;
+  top: 64px;
+  right: -100%;
+  width: 100%;
+  height: calc(100vh - 64px);
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  transition: right 0.4s ease;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+.nav.open {
+  right: 0;
+}
+
+/* HERO */
+.store-hero {
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 64px;
+}
+
+.store-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  letter-spacing: 6px;
+}
+
+.store-hero p {
+  opacity: 0.7;
+  margin-top: 12px;
+}
+
+/* STORE GRID */
+.store-grid {
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.product {
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #111;
+  margin-bottom: 18px;
+}
+
+.product h3 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.product p {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* FOOTER (shared styles expected) */
+.mailing {
+  padding: 80px 20px 40px;
+  text-align: center;
+}
+
+.mailing h2 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 4px;
+}
+
+.mailing form {
+  display: flex;
+  max-width: 460px;
+  margin: 30px auto 0;
+}
+
+.mailing input {
+  flex: 1;
+  padding: 16px;
+  border: none;
+}
+
+.mailing button {
+  padding: 16px 30px;
+  border: none;
+  background: #1f2933;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.social-bar {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 20px 0;
+}
+
+.footer {
+  padding: 30px 20px 50px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+.footer-links {
+  margin-top: 18px;
+}
+
+.footer-links a {
+  color: #666;
+  text-decoration: none;
+  margin: 0 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .store-hero h1 {
+    font-size: 2.2rem;
+  }
+}
