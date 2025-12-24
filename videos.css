@@ -72,20 +72,27 @@ body {
   right: 0;
 }
 
-/* HERO */
-.hero {
-  height: 50vh;
+/* VIDEO HERO */
+.video-hero {
+  height: 35vh; /* reduced from 50vh */
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background: radial-gradient(circle at center, #111, #000);
-  margin-top: 64px;
 }
 
-.hero h1 {
+.video-hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 38px;
   letter-spacing: 6px;
+  margin-bottom: 10px;
+}
+
+.video-hero p {
+  font-size: 14px;
+  opacity: 0.7;
+  letter-spacing: 1px;
 }
 
 /* VIDEOS */
