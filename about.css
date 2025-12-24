@@ -176,3 +176,33 @@ body {
     height: 30vh;
   }
 }
+
+/* DESKTOP NAV FIX */
+@media (min-width: 1024px) {
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    background: transparent;
+    gap: 32px;
+    right: 0;
+    transition: none;
+  }
+
+  .nav a {
+    font-size: 13px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+  }
+
+  .nav a:hover {
+    opacity: 1;
+  }
+}
+
