@@ -25,9 +25,16 @@
 <!-- HEADER -->
 <header class="header">
   <div class="logo">Official Bigi</div>
+
+  <div class="cart-icon" onclick="toggleCart()">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cart-count">0</span>
+  </div>
+
   <div class="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
+
   <nav class="nav" id="nav">
     <a href="index.html">Home</a>
     <a href="music.html">Music</a>
@@ -38,6 +45,14 @@
   </nav>
 </header>
 
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cart">
+  <h3>Your Cart</h3>
+  <div id="cart-items"></div>
+  <p class="cart-total">Total: $<span id="cart-total">0</span></p>
+  <div id="paypal-cart-button"></div>
+</div>
+
 <!-- STORE -->
 <section class="store">
   <h1>MERCH</h1>
@@ -45,8 +60,8 @@
   <div class="product-grid">
 
     <!-- PRODUCT -->
-    <div class="product-card">
-      <img src="assets/fof-green-shirt.webp" alt="Faith Over Fame Green Shirt">
+    <div class="product-card" data-name="Faith Over Fame – Green">
+      <img src="assets/fof-green-shirt.webp">
       <h3>Faith Over Fame – Green</h3>
       <p>$35</p>
 
@@ -55,12 +70,11 @@
         <button>XL</button><button>XXL</button>
       </div>
 
-      <div class="status">SELECT SIZE</div>
-      <div class="paypal-button"></div>
+      <button class="add-btn">ADD TO CART</button>
     </div>
 
-    <div class="product-card">
-      <img src="assets/fof-black-shirt.webp" alt="Faith Over Fame Black Shirt">
+    <div class="product-card" data-name="Faith Over Fame – Black">
+      <img src="assets/fof-black-shirt.webp">
       <h3>Faith Over Fame – Black</h3>
       <p>$35</p>
 
@@ -69,75 +83,20 @@
         <button>XL</button><button>XXL</button>
       </div>
 
-      <div class="status">SELECT SIZE</div>
-      <div class="paypal-button"></div>
-    </div>
-
-    <div class="product-card">
-      <img src="assets/fof-berry-shirt.webp" alt="Faith Over Fame Berry Shirt">
-      <h3>Faith Over Fame – Berry</h3>
-      <p>$35</p>
-
-      <div class="sizes">
-        <button>S</button><button>M</button><button>L</button>
-        <button>XL</button><button>XXL</button>
-      </div>
-
-      <div class="status">SELECT SIZE</div>
-      <div class="paypal-button"></div>
-    </div>
-
-    <div class="product-card">
-      <img src="assets/fof-white-shirt.webp" alt="Faith Over Fame White Shirt">
-      <h3>Faith Over Fame – White</h3>
-      <p>$35</p>
-
-      <div class="sizes">
-        <button>S</button><button>M</button><button>L</button>
-        <button>XL</button><button>XXL</button>
-      </div>
-
-      <div class="status">SELECT SIZE</div>
-      <div class="paypal-button"></div>
-    </div>
-
-    <div class="product-card">
-      <img src="assets/fof-grey-shirt.webp" alt="Faith Over Fame Grey Shirt">
-      <h3>Faith Over Fame – Grey</h3>
-      <p>$35</p>
-
-      <div class="sizes">
-        <button>S</button><button>M</button><button>L</button>
-        <button>XL</button><button>XXL</button>
-      </div>
-
-      <div class="status">SELECT SIZE</div>
-      <div class="paypal-button"></div>
+      <button class="add-btn">ADD TO CART</button>
     </div>
 
   </div>
 </section>
 
-<!-- SOCIAL ICON BAR -->
+<!-- SOCIAL -->
 <section class="social-bar">
-  <a href="https://music.apple.com/ke/artist/official-bigi/1538239239" target="_blank">
-    <i class="fa-brands fa-apple"></i>
-  </a>
-  <a href="https://soundcloud.com/official-bigi" target="_blank">
-    <i class="fa-brands fa-soundcloud"></i>
-  </a>
-  <a href="https://youtube.com/@officialbigi" target="_blank">
-    <i class="fa-brands fa-youtube"></i>
-  </a>
-  <a href="https://www.instagram.com/officialbigi__" target="_blank">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-  <a href="https://x.com/official_bigi" target="_blank">
-    <i class="fa-brands fa-x-twitter"></i>
-  </a>
-  <a href="https://www.facebook.com/share/1FvSpu2Zqr" target="_blank">
-    <i class="fa-brands fa-facebook-f"></i>
-  </a>
+  <a href="#"><i class="fa-brands fa-apple"></i></a>
+  <a href="#"><i class="fa-brands fa-soundcloud"></i></a>
+  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
 </section>
 
 <!-- FOOTER -->
@@ -151,49 +110,83 @@
 </footer>
 
 <script>
+let cart = [];
+
 function toggleMenu() {
   document.getElementById("nav").classList.toggle("open");
 }
 
+function toggleCart() {
+  document.getElementById("cart").classList.toggle("open");
+}
+
 document.querySelectorAll('.product-card').forEach(card => {
-  const sizes = card.querySelectorAll('.sizes button');
-  const status = card.querySelector('.status');
-  const paypalContainer = card.querySelector('.paypal-button');
   let selectedSize = null;
 
-  sizes.forEach(btn => {
-    btn.addEventListener('click', () => {
-      sizes.forEach(b => b.classList.remove('active'));
+  card.querySelectorAll('.sizes button').forEach(btn => {
+    btn.onclick = () => {
+      card.querySelectorAll('.sizes button').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       selectedSize = btn.textContent;
-      status.textContent = 'READY TO CHECKOUT';
-    });
+    };
   });
 
+  card.querySelector('.add-btn').onclick = () => {
+    if (!selectedSize) {
+      alert('Select a size first');
+      return;
+    }
+
+    cart.push({
+      name: card.dataset.name,
+      size: selectedSize,
+      price: 35
+    });
+
+    updateCart();
+  };
+});
+
+function updateCart() {
+  const items = document.getElementById('cart-items');
+  items.innerHTML = '';
+
+  let total = 0;
+
+  cart.forEach(item => {
+    total += item.price;
+    items.innerHTML += `<p>${item.name} (${item.size}) - $${item.price}</p>`;
+  });
+
+  document.getElementById('cart-total').textContent = total;
+  document.getElementById('cart-count').textContent = cart.length;
+
+  renderPayPal(total);
+}
+
+function renderPayPal(total) {
+  document.getElementById('paypal-cart-button').innerHTML = '';
+
+  if (total === 0) return;
+
   paypal.Buttons({
-    onClick() {
-      if (!selectedSize) {
-        alert('Please select a size first.');
-        return false;
-      }
-      return true;
-    },
     createOrder(data, actions) {
-      const productName = card.querySelector('h3').textContent;
       return actions.order.create({
         purchase_units: [{
-          description: productName + ' | Size ' + selectedSize,
-          amount: { value: '35.00' }
+          amount: { value: total.toFixed(2) }
         }]
       });
     },
     onApprove(data, actions) {
-      return actions.order.capture().then(details => {
-        alert('Thank you ' + details.payer.name.given_name + '! Order confirmed.');
+      return actions.order.capture().then(() => {
+        alert('Payment successful!');
+        cart = [];
+        updateCart();
+        toggleCart();
       });
     }
-  }).render(paypalContainer);
-});
+  }).render('#paypal-cart-button');
+}
 </script>
 
 </body>
