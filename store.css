@@ -11,7 +11,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* HEADER (shared styles required) */
+/* HEADER */
 .header {
   position: fixed;
   top: 0;
@@ -32,6 +32,7 @@ body {
   letter-spacing: 4px;
 }
 
+/* HAMBURGER */
 .hamburger {
   width: 26px;
   cursor: pointer;
@@ -44,6 +45,7 @@ body {
   margin: 6px 0;
 }
 
+/* NAV */
 .nav {
   position: fixed;
   top: 64px;
@@ -71,8 +73,8 @@ body {
 }
 
 /* HERO */
-.store-hero {
-  height: 55vh;
+.page-hero {
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,97 +83,98 @@ body {
   padding-top: 64px;
 }
 
-.store-hero h1 {
+.page-hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   letter-spacing: 6px;
 }
 
-.store-hero p {
-  opacity: 0.7;
-  margin-top: 12px;
+.page-hero p {
+  opacity: 0.6;
+  margin-top: 14px;
 }
 
-/* STORE GRID */
-.store-grid {
-  padding: 80px 24px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.product {
+/* STORE */
+.store {
+  padding: 80px 20px;
   text-align: center;
 }
 
-.product-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background: #111;
-  margin-bottom: 18px;
+.coming {
+  letter-spacing: 4px;
+  opacity: 0.7;
 }
 
-.product h3 {
-  font-size: 14px;
+/* MAILING */
+.mailing {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.mailing h2 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+.mailing form {
+  display: flex;
+  max-width: 460px;
+  margin: auto;
+}
+
+.mailing input {
+  flex: 1;
+  padding: 16px;
+  border: none;
+}
+
+.mailing button {
+  padding: 16px 30px;
+  border: none;
+  background: #1f2933;
+  color: #fff;
   letter-spacing: 2px;
-  margin-bottom: 8px;
 }
 
-.product p {
-  font-size: 12px;
-  opacity: 0.6;
-}
-
-/* SOCIAL */
+/* SOCIAL BAR */
 .social-bar {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 20px 0 10px;
-}
-
-.social-bar a {
-  color: #777;
-  font-size: 22px;
-}
-
-.social-bar a:hover {
-  color: #fff;
+  gap: 28px;
+  padding: 20px 0;
 }
 
 /* FOOTER */
 .footer {
-  padding: 10px 20px 40px;
-  text-align: center;
+  padding: 20px 20px 40px;
   font-size: 12px;
   color: #666;
+  text-align: center;
 }
 
 .footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
 .footer-links a {
   color: #666;
   text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: #fff;
+  margin: 0 14px;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .hero h1 {
+  .page-hero h1 {
     font-size: 2.2rem;
   }
 
-  .video-card iframe {
-    height: 180px;
+  .mailing form {
+    flex-direction: column;
+  }
+
+  .mailing input,
+  .mailing button {
+    width: 100%;
   }
 }
