@@ -1,45 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Official Bigi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="home.css">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+  <!-- ICONS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="about.css" />
 </head>
+
 <body>
 
-  <section class="about">
-    <h1>Official Bigi</h1>
-    <p>
-      Official Bigi is a Kenyan recording artist delivering authentic sound,
-      powerful storytelling, and real-life experiences through music.
-      Known for blending modern hip-hop with emotional depth and purpose,
-      Bigi represents growth, faith, and resilience.
-    </p>
-  </section>
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">Official Bigi</div>
 
-  <!-- FOOTER -->
-  <footer>
-    <section class="mailing">
-      <h3>JOIN THE MAILING LIST</h3>
-      <form action="https://formspree.io/f/manragwk" method="POST">
-        <input type="email" name="email" placeholder="Email address" required>
-        <button type="submit">SIGN UP</button>
-      </form>
-    </section>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    <div class="social-bar">
-      <a href="https://open.spotify.com/artist/6WHkQeMdlvrEn89t0v60AW">Spotify</a>
-      <a href="https://music.apple.com/ke/artist/official-bigi/1538239239">Apple</a>
-      <a href="https://youtube.com/@officialbigi">YouTube</a>
-      <a href="https://www.instagram.com/officialbigi__">Instagram</a>
-      <a href="https://www.tiktok.com/@officialbigi254">TikTok</a>
-      <a href="https://x.com/official_bigi">X</a>
-      <a href="https://soundcloud.com/official-bigi">SoundCloud</a>
+  <nav class="nav" id="nav">
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="videos.html">Videos</a>
+    <a href="store.html">Store</a>
+    <a href="tour.html">Tour</a>
+    <a href="about.html" class="active">About</a>
+  </nav>
+</header>
+
+<!-- ABOUT HERO -->
+<section class="about-hero">
+  <div class="about-hero-content">
+    <h1>ABOUT</h1>
+    <p>The story behind the music</p>
+  </div>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section class="about">
+  <div class="about-inner">
+
+    <div class="about-text">
+      <p>
+        Official Bigi is a Kenyan artist blending faith, culture, and modern sound.
+        Rooted in real life experiences, his music speaks to resilience, purpose,
+        and identity.
+      </p>
+
+      <p>
+        From Nairobi to global platforms, Official Bigi continues to build a sound that is
+        authentic, intentional, and deeply personal. Every release reflects growth,
+        faith, and creative freedom.
+      </p>
+
+      <p class="quote">
+        “Faith over fame. Purpose over pressure.”
+      </p>
     </div>
 
-    <p class="copyright">© 2025 Official Bigi</p>
-  </footer>
+    <div class="about-image">
+      <img src="assets/about.webp" alt="Official Bigi">
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <!-- SOCIAL ICONS -->
+  <div class="social-bar">
+    <a href="https://music.apple.com/ke/artist/official-bigi/1538239239" target="_blank">
+      <i class="fa-brands fa-apple"></i>
+    </a>
+    <a href="https://soundcloud.com/official-bigi" target="_blank">
+      <i class="fa-brands fa-soundcloud"></i>
+    </a>
+    <a href="https://youtube.com/@officialbigi" target="_blank">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+    <a href="https://www.instagram.com/officialbigi__" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://x.com/official_bigi" target="_blank">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a href="https://www.facebook.com/share/1FvSpu2Zqr" target="_blank">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+  </div>
+
+  <p class="copyright">
+    © 2025 Official Bigi. All rights reserved.
+  </p>
+
+  <div class="footer-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="cookies.html">Cookies</a>
+  </div>
+
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("nav").classList.toggle("open");
+}
+</script>
 
 </body>
 </html>
