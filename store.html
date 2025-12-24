@@ -3,58 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Store — Official Bigi</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Store | Official Bigi</title>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="store.css">
 </head>
+
 <body>
 
-  <header class="hero small-hero">
-    <div class="hero-inner">
-      <h1 class="site-title">Official Bigi Store</h1>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="music.html">Music</a>
-        <a href="videos.html">Videos</a>
-        <a href="store.html" class="active">Store</a>
-        <a href="tour.html">Tour</a>
-        <a href="subscribe.html">Subscribe</a>
-      </nav>
-    </div>
-  </header>
+<!-- SHARED HEADER -->
+<div id="header"></div>
 
-  <main class="products-grid">
-    <!-- Example product item -->
-    <!-- Copy & adjust for each product -->
-    <div class="product-card">
-      <img src="assets/IMG_3781.png" alt="Faith Over Fame Khaki T-Shirt">
-      <div class="product-info">
-        <h3>Faith Over Fame – Khaki T-Shirt</h3>
-        <!-- Optionally add price/button -->
-      </div>
-    </div>
-
-    <!-- Repeat for each product -->
-    <!-- ... -->
-
-  </main>
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <h2>Join the Movement</h2>
-  <p>Exclusive drops. Early access. No spam.</p>
-
-  <form action="https://formspree.io/f/manragwk" method="POST">
-    <input 
-      type="email" 
-      name="email" 
-      placeholder="Enter your email" 
-      required
-    >
-    <button type="submit">Subscribe</button>
-  </form>
+<!-- HERO -->
+<section class="store-hero">
+  <h1>STORE</h1>
+  <p>Official merchandise & drops</p>
 </section>
-  <footer class="site-footer">
-    <p>© 2025 Official Bigi. All rights reserved.</p>
-  </footer>
+
+<!-- PRODUCTS -->
+<section class="store-grid">
+
+  <div class="product">
+    <div class="product-image"></div>
+    <h3>Faith Over Fame Tee</h3>
+    <p>Coming Soon</p>
+  </div>
+
+  <div class="product">
+    <div class="product-image"></div>
+    <h3>Official Bigi Hoodie</h3>
+    <p>Coming Soon</p>
+  </div>
+
+  <div class="product">
+    <div class="product-image"></div>
+    <h3>Limited Poster</h3>
+    <p>Coming Soon</p>
+  </div>
+
+</section>
+
+<!-- SHARED FOOTER -->
+<div id="footer"></div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("nav").classList.toggle("open");
+}
+
+fetch("header.html").then(res => res.text()).then(data => {
+  document.getElementById("header").innerHTML = data;
+});
+
+fetch("footer.html").then(res => res.text()).then(data => {
+  document.getElementById("footer").innerHTML = data;
+});
+</script>
 
 </body>
 </html>
