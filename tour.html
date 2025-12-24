@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tour | Official BIGI</title>
+  <title>Tour | Official Bigi</title>
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,38 +37,55 @@
     <a href="music.html">Music</a>
     <a href="videos.html">Videos</a>
     <a href="store.html">Store</a>
-    <a href="tour.html">Tour</a>
+    <a href="tour.html" class="active">Tour</a>
     <a href="about.html">About</a>
   </nav>
 </header>
-  
-<!-- HERO -->
+
+<!-- TOUR HERO -->
 <section class="tour-hero">
-  <h1>TOUR</h1>
-  <p>Live. Raw. Unfiltered.</p>
+  <div class="tour-hero-content">
+    <h1>TOUR</h1>
+    <p>Upcoming Official Bigi Shows</p>
+  </div>
 </section>
 
 <!-- TOUR LIST -->
-<section class="tour-list">
-
+<section class="tour">
+  
   <div class="tour-row">
-    <span class="date">MAR 22</span>
-    <span class="city">Los Angeles, CA</span>
-    <span class="venue">The Novo</span>
+    <div class="date">
+      <span class="day">12</span>
+      <span class="month">APR</span>
+    </div>
+    <div class="details">
+      <h3>Nairobi, KE</h3>
+      <p>KICC Rooftop</p>
+    </div>
     <a href="#" class="ticket">TICKETS</a>
   </div>
 
   <div class="tour-row">
-    <span class="date">APR 05</span>
-    <span class="city">New York, NY</span>
-    <span class="venue">Webster Hall</span>
-    <a href="#" class="ticket">TICKETS</a>
+    <div class="date">
+      <span class="day">26</span>
+      <span class="month">APR</span>
+    </div>
+    <div class="details">
+      <h3>Mombasa, KE</h3>
+      <p>Fort Jesus Grounds</p>
+    </div>
+    <a href="#" class="ticket sold">SOLD OUT</a>
   </div>
 
   <div class="tour-row">
-    <span class="date">APR 18</span>
-    <span class="city">Atlanta, GA</span>
-    <span class="venue">The Tabernacle</span>
+    <div class="date">
+      <span class="day">10</span>
+      <span class="month">MAY</span>
+    </div>
+    <div class="details">
+      <h3>Kisumu, KE</h3>
+      <p>Dunga Beach Arena</p>
+    </div>
     <a href="#" class="ticket">TICKETS</a>
   </div>
 
@@ -76,17 +93,6 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-
-  <!-- SOCIAL ICONS -->
-  <div class="social-bar">
-    <a href="#"><i class="fa-brands fa-apple"></i></a>
-    <a href="#"><i class="fa-brands fa-soundcloud"></i></a>
-    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-  </div>
-
   <p class="copyright">
     © 2025 Official Bigi. All rights reserved.
   </p>
@@ -96,8 +102,13 @@
     <a href="terms.html">Terms</a>
     <a href="cookies.html">Cookies</a>
   </div>
-
 </footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("nav").classList.toggle("open");
+}
+</script>
 
 </body>
 </html>
