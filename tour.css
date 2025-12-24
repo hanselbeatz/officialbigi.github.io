@@ -180,12 +180,15 @@ body {
 /* MOBILE */
 @media (max-width: 600px) {
   .tour-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .date {
+    width: auto;
   }
 
   .ticket {
-    align-self: flex-end;
+    align-self: flex-start;
   }
 }
