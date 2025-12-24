@@ -11,13 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 
   <!-- ICONS -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="store.css" />
+  <link rel="stylesheet" href="store.css">
+
+  <!-- PAYPAL -->
+  <script src="https://www.paypal.com/sdk/js?client-id=AZ933GYfkxkWhndB0N2ArALaqXeke1h_BfBpKu3mAZk2G7Lk_Go1_SVTwNAjtypGBjc71oEKKen8dImw&currency=USD"></script>
 </head>
 
 <body>
@@ -25,11 +25,9 @@
 <!-- HEADER -->
 <header class="header">
   <div class="logo">Official Bigi</div>
-
   <div class="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
-
   <nav class="nav" id="nav">
     <a href="index.html">Home</a>
     <a href="music.html">Music</a>
@@ -46,7 +44,7 @@
 
   <div class="product-grid">
 
-    <!-- PRODUCT -->
+    <!-- PRODUCT CARD -->
     <div class="product-card">
       <img src="assets/fof-green-shirt.webp" alt="Faith Over Fame Green Shirt">
       <h3>Faith Over Fame – Green</h3>
@@ -57,7 +55,8 @@
         <button>XL</button><button>XXL</button>
       </div>
 
-      <a href="#" class="buy-btn disabled">SELECT SIZE</a>
+      <div class="status">SELECT SIZE</div>
+      <div class="paypal-button"></div>
     </div>
 
     <div class="product-card">
@@ -70,7 +69,8 @@
         <button>XL</button><button>XXL</button>
       </div>
 
-      <a href="#" class="buy-btn disabled">SELECT SIZE</a>
+      <div class="status">SELECT SIZE</div>
+      <div class="paypal-button"></div>
     </div>
 
     <div class="product-card">
@@ -83,7 +83,8 @@
         <button>XL</button><button>XXL</button>
       </div>
 
-      <a href="#" class="buy-btn disabled">SELECT SIZE</a>
+      <div class="status">SELECT SIZE</div>
+      <div class="paypal-button"></div>
     </div>
 
     <div class="product-card">
@@ -96,7 +97,8 @@
         <button>XL</button><button>XXL</button>
       </div>
 
-      <a href="#" class="buy-btn disabled">SELECT SIZE</a>
+      <div class="status">SELECT SIZE</div>
+      <div class="paypal-button"></div>
     </div>
 
     <div class="product-card">
@@ -109,30 +111,16 @@
         <button>XL</button><button>XXL</button>
       </div>
 
-      <a href="#" class="buy-btn disabled">SELECT SIZE</a>
+      <div class="status">SELECT SIZE</div>
+      <div class="paypal-button"></div>
     </div>
 
   </div>
 </section>
 
-<!-- SOCIAL -->
-<section class="social-bar">
-  <a href="#"><i class="fa-brands fa-apple"></i></a>
-  <a href="#"><i class="fa-brands fa-soundcloud"></i></a>
-  <a href="#"><i class="fa-brands fa-youtube"></i></a>
-  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-</section>
-
 <!-- FOOTER -->
 <footer class="footer">
   <p>© 2025 Official Bigi. All rights reserved.</p>
-  <div class="footer-links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="cookies.html">Cookies</a>
-  </div>
 </footer>
 
 <script>
@@ -140,19 +128,44 @@ function toggleMenu() {
   document.getElementById("nav").classList.toggle("open");
 }
 
-// SIZE SELECTOR
 document.querySelectorAll('.product-card').forEach(card => {
   const sizes = card.querySelectorAll('.sizes button');
-  const buyBtn = card.querySelector('.buy-btn');
+  const status = card.querySelector('.status');
+  const paypalContainer = card.querySelector('.paypal-button');
+  let selectedSize = null;
 
-  sizes.forEach(size => {
-    size.addEventListener('click', () => {
-      sizes.forEach(s => s.classList.remove('active'));
-      size.classList.add('active');
-      buyBtn.classList.remove('disabled');
-      buyBtn.textContent = 'BUY';
+  sizes.forEach(btn => {
+    btn.addEventListener('click', () => {
+      sizes.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedSize = btn.textContent;
+      status.textContent = 'READY TO CHECKOUT';
     });
   });
+
+  paypal.Buttons({
+    onClick() {
+      if (!selectedSize) {
+        alert('Please select a size first.');
+        return false;
+      }
+      return true;
+    },
+    createOrder(data, actions) {
+      const productName = card.querySelector('h3').textContent;
+      return actions.order.create({
+        purchase_units: [{
+          description: productName + ' | Size ' + selectedSize,
+          amount: { value: '35.00' }
+        }]
+      });
+    },
+    onApprove(data, actions) {
+      return actions.order.capture().then(details => {
+        alert('Thank you ' + details.payer.name.given_name + '! Order confirmed.');
+      });
+    }
+  }).render(paypalContainer);
 });
 </script>
 
