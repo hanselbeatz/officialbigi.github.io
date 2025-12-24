@@ -14,63 +14,59 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="store.css">
+  <link rel="stylesheet" href="store.css" />
 </head>
 
 <body>
 
-<!-- SHARED HEADER -->
-<div id="header"></div>
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">Official Bigi</div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="videos.html">Videos</a>
+    <a href="store.html">Store</a>
+    <a href="tour.html">Tour</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
 
 <!-- HERO -->
-<section class="store-hero">
+<section class="page-hero">
   <h1>STORE</h1>
-  <p>Official merchandise & drops</p>
+  <p>Official merchandise & releases</p>
 </section>
 
-<!-- PRODUCTS -->
-<section class="store-grid">
-
-  <div class="product">
-    <div class="product-image"></div>
-    <h3>Faith Over Fame Tee</h3>
-    <p>Coming Soon</p>
-  </div>
-
-  <div class="product">
-    <div class="product-image"></div>
-    <h3>Official Bigi Hoodie</h3>
-    <p>Coming Soon</p>
-  </div>
-
-  <div class="product">
-    <div class="product-image"></div>
-    <h3>Limited Poster</h3>
-    <p>Coming Soon</p>
-  </div>
-
+<!-- STORE CONTENT -->
+<section class="store">
+  <p class="coming">MERCH COMING SOON</p>
 </section>
 
-<!-- SOCIAL ICON BAR -->
+<!-- MAILING LIST -->
+<section class="mailing">
+  <h2>JOIN THE MAILING LIST</h2>
+  <form>
+    <input type="email" placeholder="Email address" required />
+    <button type="submit">SIGN UP</button>
+  </form>
+</section>
+
+<!-- SOCIAL ICONS -->
 <section class="social-bar">
-  <a href="https://music.apple.com/ke/artist/official-bigi/1538239239" target="_blank">
-    <i class="fa-brands fa-apple"></i>
-  </a>
-  <a href="https://soundcloud.com/official-bigi" target="_blank">
-    <i class="fa-brands fa-soundcloud"></i>
-  </a>
-  <a href="https://youtube.com/@officialbigi" target="_blank">
-    <i class="fa-brands fa-youtube"></i>
-  </a>
-  <a href="https://www.instagram.com/officialbigi__" target="_blank">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-  <a href="https://x.com/official_bigi" target="_blank">
-    <i class="fa-brands fa-x-twitter"></i>
-  </a>
-  <a href="https://www.facebook.com/share/1FvSpu2Zqr" target="_blank">
-    <i class="fa-brands fa-facebook-f"></i>
-  </a>
+  <a href="#"><i class="fa-brands fa-apple"></i></a>
+  <a href="#"><i class="fa-brands fa-soundcloud"></i></a>
+  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
 </section>
 
 <!-- FOOTER -->
