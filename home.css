@@ -208,6 +208,81 @@ body {
 
 .cta:hover { background: red; }
 
+/* MUSIC PREVIEW */
+.music-preview {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.music-card {
+  background: #000;
+}
+
+.music-card img {
+  width: 100%;
+  display: block;
+}
+
+.music-info {
+  padding: 16px;
+}
+
+.music-info h3 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+/* BUTTONS */
+.btn-outline {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #000;
+}
+
+.btn-solid {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #fff;
+  color: #000;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.btn-solid:hover {
+  opacity: 0.75;
+}
+
+.view-all {
+  margin-top: 20px;
+}
+
 /* MAILING */
 .mailing {
   padding: 60px 20px;
@@ -276,6 +351,17 @@ body {
 
 .footer-links a:hover {
   color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .video-card iframe {
+    height: 180px;
+  }
 }
 
 /* DESKTOP NAV FIX */
