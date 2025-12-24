@@ -5,11 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Store | Official Bigi</title>
 
-  <!-- FAVICON -->
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="store.css" />
+  <link rel="stylesheet" href="store.css">
 </head>
 
 <body>
@@ -29,53 +24,79 @@
   <div class="logo">Official Bigi</div>
 
   <div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span>
   </div>
 
   <nav class="nav" id="nav">
     <a href="index.html">Home</a>
     <a href="music.html">Music</a>
     <a href="videos.html">Videos</a>
-    <a href="store.html">Store</a>
+    <a href="store.html" class="active">Store</a>
     <a href="tour.html">Tour</a>
     <a href="about.html">About</a>
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="page-hero">
+<!-- STORE HERO -->
+<section class="store-hero">
   <h1>STORE</h1>
-  <p>Official merchandise & releases</p>
+  <p>Official Merchandise</p>
 </section>
 
-<!-- STORE CONTENT -->
+<!-- PRODUCTS -->
 <section class="store">
-  <p class="coming">MERCH COMING SOON</p>
-</section>
+  <div class="product-grid">
 
-<!-- MAILING LIST -->
-<section class="mailing">
-  <h2>JOIN THE MAILING LIST</h2>
-  <form>
-    <input type="email" placeholder="Email address" required />
-    <button type="submit">SIGN UP</button>
-  </form>
-</section>
+    <div class="product-card">
+      <img src="assets/fof-green-shirt.webp" alt="Faith Over Fame Green Shirt" loading="lazy">
+      <h3>Faith Over Fame Tee</h3>
+      <span class="price">$35</span>
+      <a href="#" class="buy-btn">BUY</a>
+    </div>
 
-<!-- SOCIAL ICONS -->
-<section class="social-bar">
-  <a href="#"><i class="fa-brands fa-apple"></i></a>
-  <a href="#"><i class="fa-brands fa-soundcloud"></i></a>
-  <a href="#"><i class="fa-brands fa-youtube"></i></a>
-  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    <div class="product-card">
+      <img src="assets/fof-black-shirt.webp" alt="Faith Over Fame Black Shirt" loading="lazy">
+      <h3>Faith Over Fame Tee</h3>
+      <span class="price">$35</span>
+      <a href="#" class="buy-btn">BUY</a>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/fof-berry-shirt.webp" alt="Faith Over Fame Berry Shirt" loading="lazy">
+      <h3>Faith Over Fame Tee</h3>
+      <span class="price">$35</span>
+      <a href="#" class="buy-btn">BUY</a>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/fof-white-shirt.webp" alt="Faith Over Fame White Shirt" loading="lazy">
+      <h3>Faith Over Fame Tee</h3>
+      <span class="price">$35</span>
+      <a href="#" class="buy-btn">BUY</a>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/fof-grey-shirt.webp" alt="Faith Over Fame Grey Shirt" loading="lazy">
+      <h3>Faith Over Fame Tee</h3>
+      <span class="price">$35</span>
+      <a href="#" class="buy-btn">BUY</a>
+    </div>
+
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
+
+  <div class="social-bar">
+    <a href="https://music.apple.com/ke/artist/official-bigi/1538239239" target="_blank"><i class="fa-brands fa-apple"></i></a>
+    <a href="https://soundcloud.com/official-bigi" target="_blank"><i class="fa-brands fa-soundcloud"></i></a>
+    <a href="https://youtube.com/@officialbigi" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://www.instagram.com/officialbigi__" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://x.com/official_bigi" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.facebook.com/share/1FvSpu2Zqr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+  </div>
+
   <p class="copyright">
     © 2025 Official Bigi. All rights reserved.
   </p>
@@ -85,6 +106,7 @@
     <a href="terms.html">Terms</a>
     <a href="cookies.html">Cookies</a>
   </div>
+
 </footer>
 
 <script>
